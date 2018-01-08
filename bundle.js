@@ -556,7 +556,7 @@ window.app = angular.module('GommaStoreApp', ["ngRoute"]);
 
 __webpack_require__(20);
 __webpack_require__(21);
-__webpack_require__(23)
+__webpack_require__(23);
 
 
 /***/ }),
@@ -69434,14 +69434,29 @@ app.factory('RemoteCallService', __webpack_require__(22));
 /***/ (function(module, exports) {
 
 function RemoteCallService($http) {
+  var baseUrl = "http://localhost:8080/gommastore/"
   return {
       get(url) {
-        return $http.get(url)
+        return $http.get(baseUrl + url)
           .then(function(data) {
             return data;
           })
+      },
+      post(url, data) {
+        return $http({
+          url:  baseUrl + url,
+          method: "POST",
+          data: data,
+          headers: {'Content-Type': 'application/json'}
+        })
+        .then(function (data) {
+            return data;
+        })
+        .catch(function (error) {
+              return error;
+        });
       }
-  }
+   }
 }
 
 module.exports = RemoteCallService;
@@ -69453,6 +69468,7 @@ module.exports = RemoteCallService;
 
 app.controller('NavController', __webpack_require__(24));
 app.controller('ListaGommeController', __webpack_require__(25));
+app.controller('NewGommaController', __webpack_require__(26));
 
 
 /***/ }),
@@ -69475,12 +69491,38 @@ module.exports = NavController;
 ListaGommeController.$inject = ['$scope','RemoteCallService'];
 
 function ListaGommeController($scope, RemoteCallService) {
-    RemoteCallService.get("https://jsonplaceholder.typicode.com/posts").then(function(data) {
-        $scope.posts = data.data;
+    RemoteCallService.get("gomme/all").then(function(data) {
+        $scope.gomme = data.data;
     });
 }
 
 module.exports = ListaGommeController;
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports) {
+
+NewGommaController.$inject = ['$scope','RemoteCallService'];
+
+function NewGommaController($scope, RemoteCallService) {
+  $scope.insertSuccess = false;
+  $scope.sendGomma = function () {
+    var data = {
+      model: $scope.model,
+      manufacturer: $scope.manufacturer,
+      price: $scope.price
+    }
+    RemoteCallService.post("gomme/new", data).then(function(data) {
+        if (data.status >= 200) {
+          $scope.insertSuccess = true;
+        }
+    });
+  }
+
+}
+
+module.exports = NewGommaController;
 
 
 /***/ })
