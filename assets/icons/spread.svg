@@ -1,0 +1,14 @@
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="26" height="26" id="canvas_background" fill="none"/>
+ </g>
+
+ <g>
+  <title>Layer 1</title>
+  <g transform="rotate(90 12,12.000000000000002) " id="svg_1">
+   <polygon points="24,12 20,8 20,11 15,11 15,0 13,0 13,24 15,24 15,13 20,13 20,16  " id="svg_2" fill="#edeeed"/>
+   <polygon points="9,11 4,11 4,8 0,12 4,16 4,13 9,13 9,24 11,24 11,0 9,0  " id="svg_3" fill="#edeeed"/>
+  </g>
+ </g>
+</svg>

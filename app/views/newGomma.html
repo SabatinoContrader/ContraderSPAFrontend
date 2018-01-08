@@ -1,0 +1,24 @@
+<div id="gomme" ng-controller="NewGommaController">
+<h3 style="text-align: center; margin-bottom: 3%;">Inserisci gomma</h3>
+<form class="ui form">
+  <div class="field">
+    <label>Model</label>
+    <input type="text" name="model" placeholder="Model" ng-model="model">
+  </div>
+  <div class="field">
+    <label>Manufacturer</label>
+    <input type="text" name="manufactuer" placeholder="Manufacturer" ng-model="manufacturer">
+  </div>
+  <div class="field">
+    <label>Price</label>
+    <input type="text" name="price" placeholder="Price" ng-model="price">
+  </div>
+  <button class="ui button" type="submit" ng-click="sendGomma()">Invia</button>
+</form>
+<div class="ui positive message" ng-if="insertSuccess">
+  <i class="close icon"></i>
+  <div class="header">
+    Gomma inserita con successo!
+  </div>
+</div>
+</div>
