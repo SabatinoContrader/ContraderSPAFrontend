@@ -1,6 +1,7 @@
 NewGommaController.$inject = ['$scope','RemoteCallService'];
 
 function NewGommaController($scope, RemoteCallService) {
+  $scope.insertSuccess = false;
   $scope.sendGomma = function () {
     var data = {
       model: $scope.model,
