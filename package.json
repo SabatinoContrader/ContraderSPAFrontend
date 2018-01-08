@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js && webpack-dev-server --content-base app/views",
+    "start": "webpack --config webpack.config.js && webpack-dev-server --content-base app/views --port 3001",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
