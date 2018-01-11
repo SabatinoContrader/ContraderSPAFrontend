@@ -1,0 +1,21 @@
+<div id="gomme" ng-controller="NewGommaController">
+    <h1></h1>
+    <h3 style="text-align: center; margin-bottom: 3%;">Log In</h3>
+    <form class="ui form">
+        <div class="field">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Username" ng-model="username">
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="text" name="password" placeholder="Password" ng-model="password">
+        </div>
+        <button class="ui button" type="submit" ng-click="sendUser()">Accedi</button>
+    </form>
+    <div class="ui positive message" ng-if="insertSuccess">
+        <i class="close icon"></i>
+        <div class="header">
+            Accesso Riuscito!
+        </div>
+    </div>
+</div>

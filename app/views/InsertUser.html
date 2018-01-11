@@ -1,0 +1,101 @@
+<div id="users" ng-controller="InsertUserController">
+    <h3 style="text-align: center; margin-bottom: 3%;">Inserisci dati</h3>
+    <form class="ui form">
+        <div class="field">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Username" ng-model="username">
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="text" name="password" placeholder="Password" ng-model="password">
+        </div>
+        <div class="field">
+            <label>Firstname</label>
+            <input type="text" name="firstname" placeholder="Firstname" ng-model="firstname">
+        </div>
+        <div class="field">
+            <label>Lastname</label>
+            <input type="text" name="lastname" placeholder="Lastname" ng-model="lastname">
+        </div>
+        <div class="field">
+            <label>Date of birth</label>
+            <input type="text" name="dateofbirth" placeholder="Dateofbirth" ng-model="dateofbirth">
+        </div>
+        <div class="field">
+            <label>Fiscal Code</label>
+            <input type="text" name="fiscalcode" placeholder="Fiscalcode" ng-model="fiscalcode">
+        </div>
+        <div class="field">
+            <label>Weight</label>
+            <input type="text" name="weight" placeholder="Weight" ng-model="weight">
+        </div>
+        <div class="field">
+            <label>Speed</label>
+            <input type="text" name="speed" placeholder="Speed" ng-model="speed">
+        </div>
+        <div class="field">
+            <label>Season</label>
+            <input type="text" name="season" placeholder="Season" ng-model="season">
+        </div>
+        <div class="field">
+            <label>Type Vehicle</label>
+            <input type="text" name="typeVehicle" placeholder="TypeVehicle" ng-model="typeVehicle">
+        </div>
+        <div class="field">
+            <label>Quantity</label>
+            <input type="text" name="quantity" placeholder="Quantity" ng-model="quantity">
+        </div>
+        <button class="ui button" type="submit" ng-click="sendGomma()">Invia</button>
+    </form>
+    <div class="ui positive message" ng-if="insertSuccess">
+        <i class="close icon"></i>
+        <div class="header">
+            Pneumatico inserito con successo!
+        </div>
+    </div>
+</div>
+
+
+username
+password
+firstname
+lastname
+dateofbirth
+fiscalcode
+businessname
+vat
+municipality
+post
+city
+address
+telephone
+role
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

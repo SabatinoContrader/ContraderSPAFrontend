@@ -69413,12 +69413,24 @@ exports.push([module.i, "/*-------------------------\r\nSimple reset\r\n--------
 
 app.config(function($routeProvider) {
   $routeProvider
+  .when("/wheelsStore", {
+      templateUrl : "wheelsStore.html"
+  })
   .when("/listaGomme", {
     templateUrl : "listaGomme.html"
   })
   .when("/newGomma", {
     templateUrl : "newGomma.html"
   })
+  .when("/listaGommeByManufacturer", {
+    templateUrl : "listaGommeByManufacturer.html"
+  })
+  .when("/loginpage", {
+    templateUrl : "loginpage.html"
+  })
+      .otherwise({
+          redirectTo: "/user.html"
+      });
 });
 
 
@@ -69469,6 +69481,8 @@ module.exports = RemoteCallService;
 app.controller('NavController', __webpack_require__(24));
 app.controller('ListaGommeController', __webpack_require__(25));
 app.controller('NewGommaController', __webpack_require__(26));
+app.controller('ListaGommeByManufacturerController', __webpack_require__(27));
+app.controller('LoginPageController', __webpack_require__(28));
 
 
 /***/ }),
@@ -69491,8 +69505,8 @@ module.exports = NavController;
 ListaGommeController.$inject = ['$scope','RemoteCallService'];
 
 function ListaGommeController($scope, RemoteCallService) {
-    RemoteCallService.get("gomme/all").then(function(data) {
-        $scope.gomme = data.data;
+    RemoteCallService.get("gomme/allgomme").then(function(data) {
+        $scope.gomme = data.data.data;
     });
 }
 
@@ -69511,9 +69525,17 @@ function NewGommaController($scope, RemoteCallService) {
     var data = {
       model: $scope.model,
       manufacturer: $scope.manufacturer,
-      price: $scope.price
+      price: $scope.price,
+      width: $scope.width,
+      height: $scope.height,
+      diameter: $scope.diameter,
+      weight: $scope.weight,
+      speed: $scope.speed,
+      season: $scope.season,
+      typeVehicle: $scope.typeVehicle,
+      quantity: $scope.quantity
     }
-    RemoteCallService.post("gomme/new", data).then(function(data) {
+    RemoteCallService.post("gomme/insertGomme", data).then(function(data) {
         if (data.status >= 200) {
           $scope.insertSuccess = true;
         }
@@ -69523,6 +69545,46 @@ function NewGommaController($scope, RemoteCallService) {
 }
 
 module.exports = NewGommaController;
+
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports) {
+
+ListaGommeByManufacturerController.$inject = ['$scope','RemoteCallService'];
+
+function ListaGommeByManufacturerController($scope, RemoteCallService) {
+    RemoteCallService.get("gomme/allgommeManufacturer").then(function(data) {
+        $scope.gomme = data.data.data;
+    });
+}
+
+module.exports = ListaGommeByManufacturerController;
+
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports) {
+
+LoginPageController.$inject = ['$scope','RemoteCallService', '$location'];
+
+function LoginPageController($scope, RemoteCallService) {
+    $scope.insertSuccess = false;
+    $scope.sendUser = function () {
+        var data = {
+            username: $scope.username,
+            password: $scope.password
+        }
+        RemoteCallService.post("login/menu", data).then(function(data) {
+            if (data.status >= 200) {
+                $scope.insertSuccess = true;
+            }
+        });
+    }
+
+}
+
+module.exports = LoginPageController;
 
 
 /***/ })

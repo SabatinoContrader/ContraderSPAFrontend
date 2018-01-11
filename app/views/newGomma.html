@@ -1,5 +1,5 @@
 <div id="gomme" ng-controller="NewGommaController">
-<h3 style="text-align: center; margin-bottom: 3%;">Inserisci gomma</h3>
+<h3 style="text-align: center; margin-bottom: 3%;">Inserisci pneumatico</h3>
 <form class="ui form">
   <div class="field">
     <label>Model</label>
@@ -13,12 +13,44 @@
     <label>Price</label>
     <input type="text" name="price" placeholder="Price" ng-model="price">
   </div>
+  <div class="field">
+    <label>Width</label>
+    <input type="text" name="width" placeholder="Width" ng-model="width">
+  </div>
+  <div class="field">
+    <label>Height</label>
+    <input type="text" name="height" placeholder="Height" ng-model="height">
+  </div>
+  <div class="field">
+    <label>Diameter</label>
+    <input type="text" name="diameter" placeholder="Diameter" ng-model="diameter">
+  </div>
+  <div class="field">
+    <label>Weight</label>
+    <input type="text" name="weight" placeholder="Weight" ng-model="weight">
+  </div>
+  <div class="field">
+    <label>Speed</label>
+    <input type="text" name="speed" placeholder="Speed" ng-model="speed">
+  </div>
+  <div class="field">
+    <label>Season</label>
+    <input type="text" name="season" placeholder="Season" ng-model="season">
+  </div>
+  <div class="field">
+    <label>Type Vehicle</label>
+    <input type="text" name="typeVehicle" placeholder="TypeVehicle" ng-model="typeVehicle">
+  </div>
+  <div class="field">
+    <label>Quantity</label>
+    <input type="text" name="quantity" placeholder="Quantity" ng-model="quantity">
+  </div>
   <button class="ui button" type="submit" ng-click="sendGomma()">Invia</button>
 </form>
 <div class="ui positive message" ng-if="insertSuccess">
   <i class="close icon"></i>
   <div class="header">
-    Gomma inserita con successo!
+    Pneumatico inserito con successo!
   </div>
 </div>
 </div>
