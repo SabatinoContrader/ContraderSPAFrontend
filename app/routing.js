@@ -9,6 +9,9 @@ app.config(function($routeProvider) {
   .when("/newGomma", {
     templateUrl : "newGomma.html"
   })
+  .when("/about", {
+    templateUrl : "about.html"
+  })
   .when("/listaGommeByManufacturer", {
     templateUrl : "listaGommeByManufacturer.html"
   })
