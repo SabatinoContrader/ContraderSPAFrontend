@@ -5,3 +5,4 @@ app.controller('ListaGommeByManufacturerController', require('./ListaGommeByManu
 app.controller('LoginPageController', require('./LoginPageController'));
 app.controller('AboutController', require('./AboutController'));
 app.controller('InsertUserController', require('./InsertUserController'));
+app.controller('searchContr', require('./searchContr'));

@@ -5,7 +5,7 @@ require('../node_modules/semantic-ui/dist/semantic.min.css');
 require('../node_modules/semantic-ui/dist/semantic');
 require('../assets/css/style.css');
 
-window.app = angular.module('GommaStoreApp', ["ngRoute"]);
+window.app= angular.module('GommaStoreApp', ["ngRoute"]);
 
 require('./routing.js');
 require('./factories');

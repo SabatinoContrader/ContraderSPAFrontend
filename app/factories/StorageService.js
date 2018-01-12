@@ -2,10 +2,10 @@ function StorageService() {
   var data = {}
   return {
       get(key) {
-        return this.data[key];
+        return data[key];
       },
       set(key, value) {
-          this.data.key = value;
+          data[key]= value;
       }
    }
 }
