@@ -22,7 +22,7 @@ app.config(function($routeProvider) {
     templateUrl : "loginpage.html"
   })
       .when("/search",{
-          templateUrl : "search"
+          templateUrl : "search.html"
       })
       .otherwise({
           redirectTo: "/user.html"

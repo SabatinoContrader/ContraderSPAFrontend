@@ -69519,6 +69519,9 @@ app.config(function($routeProvider) {
   .when("/loginpage", {
     templateUrl : "loginpage.html"
   })
+      .when("/search",{
+          templateUrl : "search.html"
+      })
       .otherwise({
           redirectTo: "/user.html"
       });
@@ -69574,10 +69577,10 @@ function StorageService() {
   var data = {}
   return {
       get(key) {
-        return this.data[key];
+        return data[key];
       },
       set(key, value) {
-          this.data.key = value;
+          data[key]= value;
       }
    }
 }
@@ -69595,6 +69598,7 @@ app.controller('ListaGommeByManufacturerController', __webpack_require__(29));
 app.controller('LoginPageController', __webpack_require__(30));
 app.controller('AboutController', __webpack_require__(31));
 app.controller('InsertUserController', __webpack_require__(32));
+app.controller('searchContr', __webpack_require__(33));
 
 
 /***/ }),
@@ -69663,13 +69667,18 @@ module.exports = NewGommaController;
 /* 29 */
 /***/ (function(module, exports) {
 
-ListaGommeByManufacturerController.$inject = ['$scope','RemoteCallService', 'StorageService'];
+ListaGommeByManufacturerController.$inject = ['$scope','RemoteCallService', 'StorageService','$location'];
 
-function ListaGommeByManufacturerController($scope, RemoteCallService, StorageService) {
-    RemoteCallService.get("gomme/allgommeManufacturer").then(function(data) {
-        $scope.gomme = data.data.data;
-        StorageService.set("gommeByManufacturer",data.data.data);
-    });
+function ListaGommeByManufacturerController($scope, RemoteCallService, StorageService,$location) {
+    $scope.sendManufacturer= function () {
+        RemoteCallService.get("gomme/allgommeManufacturer?manufacturer=" + $scope.manufacturer + "&typeVehicle=" + $scope.typeVehicle).then(function (data) {
+            $scope.gomme = data.data.data;
+            StorageService.set("gommeByManufacturer", $scope.gomme);
+        });
+
+        $location.path('/listaGommeByManufacturer');
+
+    }
 }
 
 module.exports = ListaGommeByManufacturerController;
@@ -69749,6 +69758,20 @@ function InsertUserController($scope, RemoteCallService) {
 }
 
 module.exports = InsertUserController;
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports) {
+
+searchContr.$inject = ['$scope', 'StorageService'];
+
+function searchContr($scope, StorageService)
+{
+  $scope.gomme = StorageService.get("gommeByManufacturer");
+}
+
+module.exports = searchContr;
+
 
 /***/ })
 /******/ ]);

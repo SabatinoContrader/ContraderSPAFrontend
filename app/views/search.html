@@ -1,0 +1,14 @@
+<div id="gomme" ng-controller="ListaGommeByManufacturerController">
+    <h3 style="text-align: center; margin-bottom: 3%;">Cerca pneumatico</h3>
+    <form class="ui form">
+        <div class="field">
+            <label>Manufacturer</label>
+            <input type="text" name="manufacturer" placeholder="Manufacturer" ng-model="manufacturer">
+        </div>
+        <div class="field">
+            <label>TypeVehicle</label>
+            <input type="text" name="typeVehicle" placeholder="typeVehicle" ng-model="typeVehicle">
+        </div>
+        <button class="ui button" type="submit" ng-click="sendManufacturer()">Invia</button>
+    </form>
+</div>
