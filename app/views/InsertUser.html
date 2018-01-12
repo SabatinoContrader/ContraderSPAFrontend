@@ -1,4 +1,5 @@
 <div id="users" ng-controller="InsertUserController">
+    <h1></h1>
     <h3 style="text-align: center; margin-bottom: 3%;">Inserisci dati</h3>
     <form class="ui form">
         <div class="field">
@@ -10,66 +11,60 @@
             <input type="text" name="password" placeholder="Password" ng-model="password">
         </div>
         <div class="field">
-            <label>Firstname</label>
+            <label>Nome</label>
             <input type="text" name="firstname" placeholder="Firstname" ng-model="firstname">
         </div>
         <div class="field">
-            <label>Lastname</label>
+            <label>Cognome</label>
             <input type="text" name="lastname" placeholder="Lastname" ng-model="lastname">
         </div>
         <div class="field">
-            <label>Date of birth</label>
+            <label>Data di nascita</label>
             <input type="text" name="dateofbirth" placeholder="Dateofbirth" ng-model="dateofbirth">
         </div>
         <div class="field">
-            <label>Fiscal Code</label>
+            <label>Codice Fiscale</label>
             <input type="text" name="fiscalcode" placeholder="Fiscalcode" ng-model="fiscalcode">
         </div>
         <div class="field">
-            <label>Weight</label>
-            <input type="text" name="weight" placeholder="Weight" ng-model="weight">
+            <label>Ragione Sociale</label>
+            <input type="text" name="businessname" placeholder="Businessname" ng-model="businessname">
         </div>
         <div class="field">
-            <label>Speed</label>
-            <input type="text" name="speed" placeholder="Speed" ng-model="speed">
+            <label>P.IVA</label>
+            <input type="text" name="vat" placeholder="Vat" ng-model="vat">
         </div>
         <div class="field">
-            <label>Season</label>
-            <input type="text" name="season" placeholder="Season" ng-model="season">
+            <label>Comune</label>
+            <input type="text" name="municipality" placeholder="Municipality" ng-model="municipality">
         </div>
         <div class="field">
-            <label>Type Vehicle</label>
-            <input type="text" name="typeVehicle" placeholder="TypeVehicle" ng-model="typeVehicle">
+            <label>CAP</label>
+            <input type="text" name="post" placeholder="Post" ng-model="post">
         </div>
         <div class="field">
-            <label>Quantity</label>
-            <input type="text" name="quantity" placeholder="Quantity" ng-model="quantity">
+            <label>Luogo di nascita</label>
+            <input type="text" name="city" placeholder="City" ng-model="city">
         </div>
-        <button class="ui button" type="submit" ng-click="sendGomma()">Invia</button>
+        <div class="field">
+            <label>Indirizzo</label>
+            <input type="text" name="address" placeholder="Address" ng-model="address">
+        </div>
+        <div class="field">
+            <label>Telefono</label>
+            <input type="text" name="telephone" placeholder="Telephone" ng-model="telephone">
+        </div>
+
+
+        <button class="ui button" type="submit" ng-click="sendUser()">Invia</button>
     </form>
     <div class="ui positive message" ng-if="insertSuccess">
         <i class="close icon"></i>
         <div class="header">
-            Pneumatico inserito con successo!
+            Utente Registrato!
         </div>
     </div>
 </div>
-
-
-username
-password
-firstname
-lastname
-dateofbirth
-fiscalcode
-businessname
-vat
-municipality
-post
-city
-address
-telephone
-role
 
 
 

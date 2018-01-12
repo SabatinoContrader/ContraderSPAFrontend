@@ -4,3 +4,4 @@ app.controller('NewGommaController', require('./NewGommaController'));
 app.controller('ListaGommeByManufacturerController', require('./ListaGommeByManufacturerController'));
 app.controller('LoginPageController', require('./LoginPageController'));
 app.controller('AboutController', require('./AboutController'));
+app.controller('InsertUserController', require('./InsertUserController'));

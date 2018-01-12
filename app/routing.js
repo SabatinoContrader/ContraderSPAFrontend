@@ -15,6 +15,9 @@ app.config(function($routeProvider) {
   .when("/listaGommeByManufacturer", {
     templateUrl : "listaGommeByManufacturer.html"
   })
+  .when("/insertUser", {
+      templateUrl : "InsertUser.html"
+  })
   .when("/loginpage", {
     templateUrl : "loginpage.html"
   })
