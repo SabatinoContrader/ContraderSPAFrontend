@@ -1,0 +1,35 @@
+<div id="gomme" ng-controller="ListaGommeForSizeController">
+    <h3 style="text-align: center; margin-bottom: 3%;">Cerca pneumatico per misure</h3>
+    <form class="ui form">
+        <div class="field">
+            <label>Larghezza</label>
+            <input type="text" name="width" placeholder="Width" ng-model="width" ng-required="true">
+        </div>
+        <div class="field">
+            <label>Altezza</label>
+            <input type="text" name="height" placeholder="Height" ng-model="height" ng-required="true">
+        </div>
+        <div class="field">
+            <label>Diametro</label>
+            <input type="text" name="diameter" placeholder="Diameter" ng-model="diameter" ng-required="true">
+        </div>
+        <div class="field">
+            <label>Carico</label>
+            <input type="text" name="weight" placeholder="Weight" ng-model="weight" ng-required="true">
+        </div>
+        <div class="field">
+            <label>Velocità</label>
+            <input type="text" name="speed" placeholder="Speed" ng-model="speed" ng-required="true">
+        </div>
+        <div class="field">
+            <label>Stagione</label>
+            <input type="text" name="season" placeholder="Season" ng-model="season" ng-required="true">
+        </div>
+        <div class="field">
+            <label>Tipo veicolo</label>
+            <input type="text" name="typeVehicle" placeholder="Type Vehicle" ng-model="typeVehicle" ng-required="true">
+        </div>
+
+        <button class="ui button" type="submit" ng-click="sendSize()">Cerca</button>
+    </form>
+</div>
