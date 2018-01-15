@@ -30,6 +30,9 @@ app.config(function($routeProvider) {
       .when ("/insertVehicle",{
           templateUrl: "insertVehicle.html"
       })
+      .when("/getUsers", {
+          templateUrl : "listaUsers.html"
+      })
       .otherwise({
           redirectTo: "/index.html"
       });

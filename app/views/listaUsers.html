@@ -1,0 +1,39 @@
+<div id="users" ng-controller="ListaUsersController">
+    <h3 style="text-align: center; margin-bottom: 3%;">Users Registrati</h3>
+    <div class="column">
+        <table class="ui center aligned table">
+            <thead>
+            <tr><th>Username</th>
+                <th>Password</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Dateofbirth</th>
+                <th>Fiscalcode</th>
+                <th>Businessname</th>
+                <th>VAT</th>
+                <th>Municipality</th>
+                <th>Post</th>
+                <th>City</th>
+                <th>Address</th>
+                <th>Telephone</th>
+            </tr></thead>
+            <tbody>
+            <tr ng-repeat="user in users">
+                <td>{{user.username}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+                <td>{{user.dateofbirth}}</td>
+                <td>{{user.fiscalcode}}</td>
+                <td>{{user.businessname}}</td>
+                <td>{{user.vat}}</td>
+                <td>{{user.municipality}}</td>
+                <td>{{user.post}}</td>
+                <td>{{user.city}}</td>
+                <td>{{user.address}}</td>
+                <td>{{user.telephone}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

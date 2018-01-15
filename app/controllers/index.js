@@ -8,3 +8,4 @@ app.controller('InsertUserController', require('./InsertUserController'));
 app.controller('searchContr', require('./searchContr'));
 app.controller('InsertVehicleController',require('./InsertVehicleController'));
 app.controller('ListVehicleController',require('./ListVehicleController'));
+app.controller('ListaUsersController',require('./ListaUsersController'));
