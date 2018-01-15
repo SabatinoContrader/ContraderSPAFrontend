@@ -24,7 +24,13 @@ app.config(function($routeProvider) {
       .when("/search",{
           templateUrl : "search.html"
       })
+      .when("/listaVehicle",{
+          templateUrl: "listaVehicle.html"
+      })
+      .when ("/insertVehicle",{
+          templateUrl: "insertVehicle.html"
+      })
       .otherwise({
-          redirectTo: "/user.html"
+          redirectTo: "/index.html"
       });
 });
