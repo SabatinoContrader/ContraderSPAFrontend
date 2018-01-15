@@ -1,0 +1,20 @@
+<div id="gomme" ng-controller="searchVehicle">
+    <h1></h1>
+    <h3 style="text-align: center; margin-bottom: 3%;">Pneumatici Compatibili</h3>
+    <div ng-repeat="gomma in gommeByVehicle">
+        <div class="ui card" style="display:block; margin: 0 auto; padding: 2%;">
+            <p><strong>Model:</strong> {{gomma.model}}</p>
+            <p><strong>Manufacturer:</strong> {{gomma.manufacturer}}</p>
+            <p><strong>Price:</strong> {{gomma.price}}</p>
+            <p><strong>Width:</strong> {{gomma.width}}</p>
+            <p><strong>Height:</strong> {{gomma.height}}</p>
+            <p><strong>Diameter:</strong> {{gomma.diameter}}</p>
+            <p><strong>Weight:</strong> {{gomma.weight}}</p>
+            <p><strong>Speed:</strong> {{gomma.speed}}</p>
+            <p><strong>Season:</strong> {{gomma.season}}</p>
+            <p><strong>Type Vehicle:</strong> {{gomma.typeVehicle}}</p>
+            <p><strong>Quantity:</strong> {{gomma.quantity}}</p>
+        </div>
+    </div>
+
+</div>

@@ -1,4 +1,5 @@
-app.config(function($routeProvider) {
+app.config(function($routeProvider)
+{
   $routeProvider
   .when("/wheelsStore", {
       templateUrl : "wheelsStore.html"
@@ -30,10 +31,21 @@ app.config(function($routeProvider) {
       .when ("/insertVehicle",{
           templateUrl: "insertVehicle.html"
       })
+
       .when("/getUsers", {
-          templateUrl : "listaUsers.html"
-      })
-      .otherwise({
-          redirectTo: "/index.html"
-      });
+          templateUrl: "listaUsers.html"})
+
+              .when("/searchForVehicle", {
+                  templateUrl: "searchForVehicle.html"
+              })
+              .when("/listaGommeByVehicle", {
+                  templateUrl: "listaGommeByVehicle.html"
+              })
+              .otherwise({
+                  redirectTo: "/index.html"
+              });
+
+
+
+
 });

@@ -69496,7 +69496,8 @@ exports.push([module.i, "/*-------------------------\r\nSimple reset\r\n--------
 /* 21 */
 /***/ (function(module, exports) {
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider)
+{
   $routeProvider
   .when("/wheelsStore", {
       templateUrl : "wheelsStore.html"
@@ -69528,9 +69529,23 @@ app.config(function($routeProvider) {
       .when ("/insertVehicle",{
           templateUrl: "insertVehicle.html"
       })
-      .otherwise({
-          redirectTo: "/index.html"
-      });
+
+      .when("/getUsers", {
+          templateUrl: "listaUsers.html"})
+
+              .when("/searchForVehicle", {
+                  templateUrl: "searchForVehicle.html"
+              })
+              .when("/listaGommeByVehicle", {
+                  templateUrl: "listaGommeByVehicle.html"
+              })
+              .otherwise({
+                  redirectTo: "/index.html"
+              });
+
+
+
+
 });
 
 
@@ -69607,6 +69622,13 @@ app.controller('InsertUserController', __webpack_require__(32));
 app.controller('searchContr', __webpack_require__(33));
 app.controller('InsertVehicleController',__webpack_require__(34));
 app.controller('ListVehicleController',__webpack_require__(35));
+app.controller('ListaUsersController',__webpack_require__(36));
+app.controller('searchForSizeController',__webpack_require__(37));
+app.controller('ListaGommeForSizeController',__webpack_require__(38));
+app.controller('ListaGommeByVehicleController',__webpack_require__(39));
+app.controller('searchVehicle',__webpack_require__(40));
+
+
 
 
 /***/ }),
@@ -69675,6 +69697,7 @@ module.exports = NewGommaController;
 /* 29 */
 /***/ (function(module, exports) {
 
+
 ListaGommeByManufacturerController.$inject = ['$scope','RemoteCallService', 'StorageService','$location'];
 
 function ListaGommeByManufacturerController($scope, RemoteCallService, StorageService,$location) {
@@ -69685,13 +69708,10 @@ function ListaGommeByManufacturerController($scope, RemoteCallService, StorageSe
             $location.path('/listaGommeByManufacturer');
         });
 
-
-
     }
 }
 
 module.exports = ListaGommeByManufacturerController;
-
 
 /***/ }),
 /* 30 */
@@ -69834,6 +69854,111 @@ function ListVehicleController($scope, RemoteCallService) {
 }
 
 module.exports = ListVehicleController;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports) {
+
+ListaUsersController.$inject = ['$scope','RemoteCallService'];
+
+function ListaUsersController($scope, RemoteCallService) {
+    RemoteCallService.get("users/getUsers").then(function(data) {
+        $scope.users= data.data.data;
+    });
+}
+
+module.exports = ListaUsersController;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports) {
+
+searchForSizeController.$inject = ['$scope', 'StorageService'];
+
+function searchForSizeController($scope, StorageService)
+{
+  $scope.gomme = StorageService.get("gommeForSize");
+}
+
+module.exports = searchForSizeController;
+
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports) {
+
+ListaGommeForSizeController.$inject = ['$scope','RemoteCallService', 'StorageService','$location'];
+
+function ListaGommeForSizeController($scope, RemoteCallService, StorageService,$location) {
+    $scope.sendSize= function () {
+        RemoteCallService.get("gomme/gommeForSize?width=" + $scope.width +"&height=" +$scope.height+"&diameter="+$scope.diameter+
+            "&weight="+$scope.weight+"&speed="+$scope.speed+"&season="+$scope.season+"&typeVehicle="+$scope.typeVehicle).then(function (data) {
+            $scope.gomme = data.data.data;
+            StorageService.set("gommeForSize", $scope.gomme);
+            $location.path('/listaGommeForSize');
+        });
+
+
+    }
+}
+
+module.exports = ListaGommeForSizeController;
+
+/*width;
+height;
+diameter;
+weight;
+speed;
+season;
+typeVehicle;*/
+
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+
+ListaGommeByVehicleController.$inject = ['$scope','RemoteCallService', 'StorageService','$location'];
+
+function ListaGommeByVehicleController($scope, RemoteCallService, StorageService,$location) {
+    $scope.insertSuccess = false;
+    $scope.sendByVehicle= function () {
+        var data={
+            brand: $scope.brand,
+            model: $scope.model,
+            fuel: $scope.fuel,
+            version: $scope.version,
+            capacity: $scope.capacity
+        }
+        RemoteCallService.post("vehicle/searchVehicle",data).then(function (data) {
+            $scope.gomme= data.data.data;
+            if((data.data.response==1)|(data.data.response==2)|(data.data.status<200)){
+                $scope.insertSuccess =true;
+                }
+                else{
+            StorageService.set("gommeByVehicle", $scope.gomme);
+            $location.path('/listaGommeByVehicle');}
+
+        });
+
+
+
+    }
+}
+
+module.exports = ListaGommeByVehicleController;
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports) {
+
+searchVehicle.$inject = ['$scope', 'StorageService'];
+
+function searchVehicle($scope, StorageService)
+{
+    $scope.gommeByVehicle = StorageService.get("gommeByVehicle");
+}
+
+module.exports = searchVehicle;
 
 /***/ })
 /******/ ]);

@@ -9,3 +9,9 @@ app.controller('searchContr', require('./searchContr'));
 app.controller('InsertVehicleController',require('./InsertVehicleController'));
 app.controller('ListVehicleController',require('./ListVehicleController'));
 app.controller('ListaUsersController',require('./ListaUsersController'));
+app.controller('searchForSizeController',require('./searchForSizeController'));
+app.controller('ListaGommeForSizeController',require('./ListaGommeForSizeController'));
+app.controller('ListaGommeByVehicleController',require('./ListaGommeByVehicleController'));
+app.controller('searchVehicle',require('./searchVehicle'));
+
+

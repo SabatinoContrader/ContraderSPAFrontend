@@ -1,3 +1,4 @@
+
 ListaGommeByManufacturerController.$inject = ['$scope','RemoteCallService', 'StorageService','$location'];
 
 function ListaGommeByManufacturerController($scope, RemoteCallService, StorageService,$location) {
@@ -7,8 +8,6 @@ function ListaGommeByManufacturerController($scope, RemoteCallService, StorageSe
             StorageService.set("gommeByManufacturer", $scope.gomme);
             $location.path('/listaGommeByManufacturer');
         });
-
-
 
     }
 }
