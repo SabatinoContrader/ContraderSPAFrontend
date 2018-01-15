@@ -14,10 +14,10 @@
         </div>
         <button class="ui button" type="submit" ng-click="sendUser()">Accedi</button>
     </form>
-    <div class="ui positive message" ng-if="insertSuccess">
+    <div class="ui positive message" ng-if="!insertSuccess">
         <i class="close icon"></i>
         <div class="header">
-            Accesso Riuscito!
+            Accesso non riuscito!
         </div>
     </div>
 </div>

@@ -69522,8 +69522,14 @@ app.config(function($routeProvider) {
       .when("/search",{
           templateUrl : "search.html"
       })
+      .when("/listaVehicle",{
+          templateUrl: "listaVehicle.html"
+      })
+      .when ("/insertVehicle",{
+          templateUrl: "insertVehicle.html"
+      })
       .otherwise({
-          redirectTo: "/user.html"
+          redirectTo: "/index.html"
       });
 });
 
@@ -69676,9 +69682,10 @@ function ListaGommeByManufacturerController($scope, RemoteCallService, StorageSe
         RemoteCallService.get("gomme/allgommeManufacturer?manufacturer=" + $scope.manufacturer + "&typeVehicle=" + $scope.typeVehicle).then(function (data) {
             $scope.gomme = data.data.data;
             StorageService.set("gommeByManufacturer", $scope.gomme);
+            $location.path('/listaGommeByManufacturer');
         });
 
-        $location.path('/listaGommeByManufacturer');
+
 
     }
 }
@@ -69692,8 +69699,8 @@ module.exports = ListaGommeByManufacturerController;
 
 LoginPageController.$inject = ['$scope','RemoteCallService', '$location'];
 
-function LoginPageController($scope, RemoteCallService) {
-    $scope.insertSuccess = false;
+function LoginPageController($scope, RemoteCallService, $location) {
+    $scope.insertSuccess = true;
     $scope.sendUser = function () {
         var data = {
             username: $scope.username,
@@ -69701,8 +69708,17 @@ function LoginPageController($scope, RemoteCallService) {
         }
         RemoteCallService.post("login/menu", data).then(function(data) {
             if (data.status >= 200) {
-                $scope.insertSuccess = true;
+
+                if(data.data.response == 2)
+                    $location.path('/menuAdmin');
+                else if (data.data.response == 3)
+                    $location.path('/menuUser');
+                else
+                    $scope.insertSuccess = false;
             }
+            else
+                $scope.insertSuccess = false;
+
         });
     }
 
