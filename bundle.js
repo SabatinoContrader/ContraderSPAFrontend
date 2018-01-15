@@ -69635,9 +69635,9 @@ app.controller('searchVehicle',__webpack_require__(40));
 /* 26 */
 /***/ (function(module, exports) {
 
-NavController.$inject = ['$scope']
+NavController.$inject = ['$scope','StorageService']
 
-function NavController ($scope) {
+function NavController ($scope, StorageService) {
 
 }
 
@@ -69717,9 +69717,9 @@ module.exports = ListaGommeByManufacturerController;
 /* 30 */
 /***/ (function(module, exports) {
 
-LoginPageController.$inject = ['$scope','RemoteCallService', '$location'];
+LoginPageController.$inject = ['$scope','RemoteCallService', '$location','StorageService'];
 
-function LoginPageController($scope, RemoteCallService, $location) {
+function LoginPageController($scope, RemoteCallService, $location, StorageService) {
     $scope.insertSuccess = true;
     $scope.sendUser = function () {
         var data = {
@@ -69740,7 +69740,10 @@ function LoginPageController($scope, RemoteCallService, $location) {
                 $scope.insertSuccess = false;
 
         });
+
     }
+
+
 
 }
 
@@ -69766,9 +69769,9 @@ module.exports = AboutController;
 /* 32 */
 /***/ (function(module, exports) {
 
-InsertUserController.$inject = ['$scope','RemoteCallService'];
+InsertUserController.$inject = ['$scope','RemoteCallService','StorageService','$location'];
 
-function InsertUserController($scope, RemoteCallService) {
+function InsertUserController($scope, RemoteCallService,StorageService, $location) {
     $scope.insertSuccess = false;
     $scope.sendUser = function () {
         var data = {
@@ -69790,6 +69793,7 @@ function InsertUserController($scope, RemoteCallService) {
         RemoteCallService.post("users/newUser", data).then(function(data) {
             if (data.status >= 200) {
                 $scope.insertSuccess = true;
+                $location.path('/loginpage');
             }
         });
     }

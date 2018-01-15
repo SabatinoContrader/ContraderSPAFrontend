@@ -1,6 +1,6 @@
-LoginPageController.$inject = ['$scope','RemoteCallService', '$location'];
+LoginPageController.$inject = ['$scope','RemoteCallService', '$location','StorageService'];
 
-function LoginPageController($scope, RemoteCallService, $location) {
+function LoginPageController($scope, RemoteCallService, $location, StorageService) {
     $scope.insertSuccess = true;
     $scope.sendUser = function () {
         var data = {
@@ -21,7 +21,10 @@ function LoginPageController($scope, RemoteCallService, $location) {
                 $scope.insertSuccess = false;
 
         });
+
     }
+
+
 
 }
 

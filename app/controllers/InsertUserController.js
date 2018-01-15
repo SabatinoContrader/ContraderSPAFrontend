@@ -1,6 +1,6 @@
-InsertUserController.$inject = ['$scope','RemoteCallService'];
+InsertUserController.$inject = ['$scope','RemoteCallService','StorageService','$location'];
 
-function InsertUserController($scope, RemoteCallService) {
+function InsertUserController($scope, RemoteCallService,StorageService, $location) {
     $scope.insertSuccess = false;
     $scope.sendUser = function () {
         var data = {
@@ -22,6 +22,7 @@ function InsertUserController($scope, RemoteCallService) {
         RemoteCallService.post("users/newUser", data).then(function(data) {
             if (data.status >= 200) {
                 $scope.insertSuccess = true;
+                $location.path('/loginpage');
             }
         });
     }

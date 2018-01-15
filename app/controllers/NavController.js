@@ -1,6 +1,6 @@
-NavController.$inject = ['$scope']
+NavController.$inject = ['$scope','StorageService']
 
-function NavController ($scope) {
+function NavController ($scope, StorageService) {
 
 }
 

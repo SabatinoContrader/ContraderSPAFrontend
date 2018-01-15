@@ -1,22 +1,22 @@
 <div id="users" ng-controller="InsertUserController">
     <h1></h1>
     <h3 style="text-align: center; margin-bottom: 3%;">Inserisci dati</h3>
-    <form class="ui form">
+    <form class="ui form" name="regForm">
         <div class="field">
             <label>Username</label>
-            <input type="text" name="username" placeholder="Username" ng-model="username">
+            <input type="text" name="username" placeholder="Username" ng-model="username" ng-required="true">
         </div>
         <div class="field">
             <label>Password</label>
-            <input type="text" name="password" placeholder="Password" ng-model="password">
+            <input type="text" name="password" placeholder="Password" ng-model="password" ng-required="true">
         </div>
         <div class="field">
             <label>Nome</label>
-            <input type="text" name="firstname" placeholder="Firstname" ng-model="firstname">
+            <input type="text" name="firstname" placeholder="Firstname" ng-model="firstname"ng-required="true">
         </div>
         <div class="field">
             <label>Cognome</label>
-            <input type="text" name="lastname" placeholder="Lastname" ng-model="lastname">
+            <input type="text" name="lastname" placeholder="Lastname" ng-model="lastname" ng-required="true">
         </div>
         <div class="field">
             <label>Data di nascita</label>
@@ -55,8 +55,7 @@
             <input type="text" name="telephone" placeholder="Telephone" ng-model="telephone">
         </div>
 
-
-        <button class="ui button" type="submit" ng-click="sendUser()">Invia</button>
+        <button class="ui button" type="submit" ng-disabled="regForm.$invalid" ng-click="sendUser()">Invia</button>
     </form>
     <div class="ui positive message" ng-if="insertSuccess">
         <i class="close icon"></i>
