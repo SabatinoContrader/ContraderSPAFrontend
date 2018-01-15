@@ -6,3 +6,5 @@ app.controller('LoginPageController', require('./LoginPageController'));
 app.controller('AboutController', require('./AboutController'));
 app.controller('InsertUserController', require('./InsertUserController'));
 app.controller('searchContr', require('./searchContr'));
+app.controller('InsertVehicleController',require('./InsertVehicleController'));
+app.controller('ListVehicleController',require('./ListVehicleController'));

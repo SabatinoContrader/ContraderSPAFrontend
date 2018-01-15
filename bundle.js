@@ -69599,6 +69599,8 @@ app.controller('LoginPageController', __webpack_require__(30));
 app.controller('AboutController', __webpack_require__(31));
 app.controller('InsertUserController', __webpack_require__(32));
 app.controller('searchContr', __webpack_require__(33));
+app.controller('InsertVehicleController',__webpack_require__(34));
+app.controller('ListVehicleController',__webpack_require__(35));
 
 
 /***/ }),
@@ -69772,6 +69774,49 @@ function searchContr($scope, StorageService)
 
 module.exports = searchContr;
 
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports) {
+
+InsertVehicleController.$inject=['$scope','RemoteCallService'];
+
+function InsertVehicleController($scope, RemoteCallService) {
+    $scope.insertSuccess = false;
+    $scope.sendVehicle = function () {
+        var data={
+            brand: $scope.brand,
+            model: $scope.model,
+            fuel: $scope.fuel,
+            version: $scope.version,
+            capacity: $scope.capacity,
+        }
+        RemoteCallService.post("vehicle/insertVehicle", data).then(function(data) {
+            if (data.status >= 200) {
+                $scope.insertSuccess = true;
+    }
+        });
+    }
+
+}
+
+module.exports = InsertVehicleController;
+
+
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports) {
+
+ListVehicleController.$inject = ['$scope','RemoteCallService'];
+
+function ListVehicleController($scope, RemoteCallService) {
+    RemoteCallService.get("vehicle/allvehicles").then(function(data) {
+        $scope.vehicle= data.data.data;
+    });
+}
+
+module.exports = ListVehicleController;
 
 /***/ })
 /******/ ]);

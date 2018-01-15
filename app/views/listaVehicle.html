@@ -1,0 +1,12 @@
+<div id="vehicle" ng-controller="ListVehicleController">
+    <h3 style="text-align: center; margin-bottom: 3%;">Veicoli Registrati</h3>
+    <div ng-repeat="vehicle in vehicle">
+        <div class="ui card" style="display:block; margin: 0 auto; padding: 2%;">
+            <p><strong>Brand:</strong> {{vehicle.brand}}</p>
+            <p><strong>Model:</strong> {{vehicle.model}}</p>
+            <p><strong>Fuel:</strong> {{vehicle.fuel}}</p>
+            <p><strong>Version:</strong> {{vehicle.version}}</p>
+            <p><strong>Capacity:</strong> {{vehicle.capacity}}</p>
+        </div>
+    </div>
+</div>

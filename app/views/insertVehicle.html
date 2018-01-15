@@ -1,0 +1,33 @@
+<div id="vehicles" ng-controller="InsertVehicleController">
+    <h1></h1>
+    <h3 style="text-align: center; margin-bottom: 3%;">Inserisci dati del veicolo</h3>
+    <form class="ui form">
+        <div class="field">
+            <label>Brand</label>
+            <input type="text" name="brand" placeholder="Brand" ng-model="brand">
+        </div>
+        <div class="field">
+            <label>Model</label>
+            <input type="text" name="model" placeholder="Model" ng-model="model">
+        </div>
+        <div class="field">
+            <label>Fuel</label>
+            <input type="text" name="fuel" placeholder="Fuel" ng-model="fuel">
+        </div>
+        <div class="field">
+            <label>Version</label>
+            <input type="text" name="version" placeholder="Version" ng-model="version">
+        </div>
+        <div class="field">
+            <label>Capacity</label>
+            <input type="text" name="capacity" placeholder="Capacity" ng-model="capacity">
+        </div>
+        <button class="ui button" type="submit" ng-click="sendVehicle()">Inserisci</button>
+    </form>
+    <div class="ui positive message" ng-if="insertSuccess">
+        <i class="close icon"></i>
+        <div class="header">
+            Veicolo Inserito!
+        </div>
+    </div>
+</div>
