@@ -3,47 +3,28 @@
 
 <head>
   <meta charset="utf-8"/>
+  <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/css/semantic.min.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
   <title>WheelsStore</title>
 </head>
 
 <script src="../../bundle.js"></script>
 
-
 <body ng-app="GommaStoreApp" ng-cloak>
 
-  <div ng-controller="NavController" class="ui fixed inverted menu">
+  <div class="ui fixed inverted menu">
     <div class="ui container">
-      <a href="#!wheelsStore" class="header item">
-        Wheels Store
-      </a>
-      <div class="ui simple dropdown item">
-        Scopri <i class="dropdown icon"></i>
-        <div class="menu">
-          <a class="item" href="#!listaGomme">I nostri pneumatici</a>
-          <a class="item" href="#!newGomma">Inserisci un nuovo pneumatico</a>
-          <a class="item" href="#!search">Ricerca pneumatico per brand</a>
-          <a class="item" href="#!listaVehicle">I nostri veicoli</a>
-          <a class="item" href="#!insertVehicle">Inserisci nuovo veicolo</a>
-          <a class="item" href="#!getUsers">I nostri utenti</a>
-            <a class="item" href="#!searchForVehicle">Cerca pneumatico per il tuo Veicolo</a>
-
-        </div>
-      </div>
-      <div class="ui simple dropdown item">
-        Chi siamo <i class="dropdown icon"></i>
-        <div class="menu">
-          <a class="item" href="#">La nostra storia</a>
-          <div class="divider"></div>
-          <a class="item" href="#!about">Contattaci</a>
-        </div>
-      </div>
-      <a href="#!loginpage" class="header item">
-        Login
+      <a href="#!wheelsStore" class="header item">Wheels Store</a>
+    </div>
+    <div id="nav" class="right menu">
+        <a href="#!login" class="item">
+            <i class="sign in icon">
+            </i> Accedi
         </a>
-        <a href="#!insertUser" class="header item">
-        Registrati
+        <a href="#!insertUser" class="item">
+            <i class="add user icon">
+            </i> Registrati
         </a>
-      </ul>
     </div>
   </div>
 

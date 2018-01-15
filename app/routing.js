@@ -31,7 +31,6 @@ app.config(function($routeProvider)
       .when ("/insertVehicle",{
           templateUrl: "insertVehicle.html"
       })
-
       .when("/getUsers", {
           templateUrl: "listaUsers.html"})
 
@@ -41,11 +40,16 @@ app.config(function($routeProvider)
               .when("/listaGommeByVehicle", {
                   templateUrl: "listaGommeByVehicle.html"
               })
-              .otherwise({
-                  redirectTo: "/index.html"
-              });
-
-
-
-
+      .when("/login", {
+          templateUrl : "loginpage.html"
+      })
+      .when("/menuAdmin", {
+          templateUrl : "menuAdmin.html"
+      })
+      .when("/menuUser", {
+          templateUrl : "menuUser.html"
+      })
+      .otherwise({
+          redirectTo: "/index.html"
+      });
 });

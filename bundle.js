@@ -69529,6 +69529,7 @@ app.config(function($routeProvider)
       .when ("/insertVehicle",{
           templateUrl: "insertVehicle.html"
       })
+<<<<<<< Updated upstream
 
       .when("/getUsers", {
           templateUrl: "listaUsers.html"})
@@ -69546,6 +69547,20 @@ app.config(function($routeProvider)
 
 
 
+=======
+      .when("/login", {
+          templateUrl : "loginpage.html"
+      })
+      .when("/menuAdmin", {
+          templateUrl : "menuAdmin.html"
+      })
+      .when("/menuUser", {
+          templateUrl : "menuUser.html"
+      })
+      .otherwise({
+          redirectTo: "/index.html"
+      });
+>>>>>>> Stashed changes
 });
 
 
@@ -69637,10 +69652,30 @@ app.controller('searchVehicle',__webpack_require__(40));
 
 NavController.$inject = ['$scope','StorageService']
 
+<<<<<<< Updated upstream
 function NavController ($scope, StorageService) {
+=======
+function NavController ($scope,StorageService)
+{
+    if(StorageService.get("user")==null)
+    {
+        var menuRight = document.getElementById("nav");
+        menuRight.innerHTML = " <a href=\"#!login\" class=\"item\">\n" +
+            "        <i class=\"sign in icon\"></i>\n" +
+            "        Accedi\n" +
+            "      </a>\n" +
+            "      <a href=\"#!insertUser\" class=\"item\">\n" +
+            "        <i class=\"add user icon\"></i>\n" +
+            "        Registrati\n" +
+            "      </a>";
+    }
+    else
+    {
+        alert("asdasas");
+    }
+>>>>>>> Stashed changes
 
 }
-
 module.exports = NavController;
 
 
@@ -69717,9 +69752,15 @@ module.exports = ListaGommeByManufacturerController;
 /* 30 */
 /***/ (function(module, exports) {
 
+<<<<<<< Updated upstream
 LoginPageController.$inject = ['$scope','RemoteCallService', '$location','StorageService'];
 
 function LoginPageController($scope, RemoteCallService, $location, StorageService) {
+=======
+LoginPageController.$inject = ['$scope','RemoteCallService','StorageService', '$location'];
+
+function LoginPageController($scope, RemoteCallService,StorageService,$location) {
+>>>>>>> Stashed changes
     $scope.insertSuccess = true;
     $scope.sendUser = function () {
         var data = {
@@ -69727,14 +69768,34 @@ function LoginPageController($scope, RemoteCallService, $location, StorageServic
             password: $scope.password
         }
         RemoteCallService.post("login/menu", data).then(function(data) {
-            if (data.status >= 200) {
+            if (data.status >= 200)
+            {
 
                 if(data.data.response == 2)
+                {
+                    $scope.user = data.data.data;
+                    alert($scope.user);
+                    StorageService.set("user",$scope.user);
+                    var menuRight = document.getElementById("nav");
+                    menuRight.innerHTML = " <div class=\"item\">\n" +
+                        "        <i class=\"user icon\"></i>\n" +
+                        "        \n" +
+                        "      </div>\n" +
+                        "      <a href=\"#!insertUser\" class=\"item\">\n" +
+                        "        <i class=\"sign out icon\"></i>\n" +
+                        "        Logout\n" +
+                        "      </a>";
                     $location.path('/menuAdmin');
-                else if (data.data.response == 3)
-                    $location.path('/menuUser');
+                }
                 else
-                    $scope.insertSuccess = false;
+                    if (data.data.response == 3)
+                    {
+                        $scope.user = data.data.data;
+                        StorageService.set("user",$scope.user);
+                        $location.path('/menuUser');
+                    }
+                    else
+                        $scope.insertSuccess = false;
             }
             else
                 $scope.insertSuccess = false;
