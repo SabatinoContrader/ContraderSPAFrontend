@@ -17,6 +17,7 @@ function InsertUserController($scope, RemoteCallService) {
             city: $scope.city,
             address: $scope.address,
             telephone: $scope.telephone,
+            role: "user"
         }
         RemoteCallService.post("users/newUser", data).then(function(data) {
             if (data.status >= 200) {

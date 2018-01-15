@@ -3,16 +3,16 @@
     <h1></h1>
     <h1></h1>
     <h3 style="text-align: center; margin-bottom: 3%;">Log In</h3>
-    <form class="ui form">
+    <form class="ui form" name="loginForm">
         <div class="field">
             <label>Username</label>
-            <input type="text" name="username" placeholder="Username" ng-model="username">
+            <input type="text" name="username" placeholder="Username" ng-model="username" ng-required="true">
         </div>
         <div class="field">
             <label>Password</label>
-            <input type="text" name="password" placeholder="Password" ng-model="password">
+            <input type="text" name="password" placeholder="Password" ng-model="password" ng-required="true">
         </div>
-        <button class="ui button" type="submit" ng-click="sendUser()">Accedi</button>
+        <button class="ui button" type="submit" ng-disabled="loginForm.$invalid" ng-click="sendUser()">Accedi</button>
     </form>
     <div class="ui positive message" ng-if="!insertSuccess">
         <i class="close icon"></i>
