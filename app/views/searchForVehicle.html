@@ -1,27 +1,27 @@
 <div id="gomme" ng-controller="ListaGommeByVehicleController">
     <h3 style="text-align: center; margin-bottom: 3%;">Cerca il tuo veicolo</h3>
-    <form class="ui form">
+    <form class="ui form" name="searchForVehicleForm">
         <div class="field">
             <label>Brand</label>
-            <input type="text" name="brand" placeholder="Brand" ng-model="brand">
+            <input type="text" name="brand" placeholder="Brand" ng-model="brand"  ng-required="true">
         </div>
         <div class="field">
             <label>Model</label>
-            <input type="text" name="model" placeholder="Model" ng-model="model">
+            <input type="text" name="model" placeholder="Model" ng-model="model"  ng-required="true">
         </div>
         <div class="field">
             <label>Fuel</label>
-            <input type="text" name="fuel" placeholder="Fuel" ng-model="fuel">
+            <input type="text" name="fuel" placeholder="Fuel" ng-model="fuel"  ng-required="true">
         </div>
         <div class="field">
             <label>Version</label>
-            <input type="text" name="version" placeholder="Version" ng-model="version">
+            <input type="text" name="version" placeholder="Version" ng-model="version"  ng-required="true">
         </div>
         <div class="field">
             <label>Capacity</label>
-            <input type="text" name="capacity" placeholder="Capacity" ng-model="capacity">
+            <input type="text" name="capacity" placeholder="Capacity" ng-model="capacity"  ng-required="true">
         </div>
-        <button class="ui button" type="submit" ng-click="sendByVehicle()">Cerca</button>
+        <button class="ui button" type="submit" ng-disabled="searchForVehicleForm.$invalid" ng-click="sendByVehicle()">Cerca</button>
     </form>
     <div class="ui negative message" ng-if="insertSuccess">
         <i class="close icon"></i>

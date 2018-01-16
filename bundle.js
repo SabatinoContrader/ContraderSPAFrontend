@@ -69446,7 +69446,10 @@ app.config(function($routeProvider)
       })
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
       .when("/getUsers", {
           templateUrl: "listaUsers.html"})
 
@@ -69456,14 +69459,6 @@ app.config(function($routeProvider)
               .when("/listaGommeByVehicle", {
                   templateUrl: "listaGommeByVehicle.html"
               })
-              .otherwise({
-                  redirectTo: "/index.html"
-              });
-
-
-
-
-=======
       .when("/login", {
           templateUrl : "loginpage.html"
       })
@@ -69480,7 +69475,6 @@ app.config(function($routeProvider)
       .otherwise({
           redirectTo: "/index.html"
       });
->>>>>>> Stashed changes
 });
 
 
@@ -69586,9 +69580,6 @@ app.controller('ListaUsersController',__webpack_require__(35));
 
 NavController.$inject = ['$scope','StorageService']
 
-<<<<<<< Updated upstream
-function NavController ($scope, StorageService) {
-=======
 function NavController ($scope,StorageService)
 {
     if(StorageService.get("user")==null)
@@ -69607,8 +69598,6 @@ function NavController ($scope,StorageService)
     {
         alert("asdasas");
     }
->>>>>>> Stashed changes
-
 }
 module.exports = NavController;
 
@@ -69691,15 +69680,11 @@ module.exports = ListaGommeByManufacturerController;
 /* 29 */
 /***/ (function(module, exports) {
 
-<<<<<<< Updated upstream
-LoginPageController.$inject = ['$scope','RemoteCallService', '$location','StorageService'];
 
-function LoginPageController($scope, RemoteCallService, $location, StorageService) {
-=======
 LoginPageController.$inject = ['$scope','RemoteCallService','StorageService', '$location'];
 
 function LoginPageController($scope, RemoteCallService,StorageService,$location) {
->>>>>>> Stashed changes
+
     $scope.insertSuccess = true;
     $scope.sendUser = function () {
         var data = {
@@ -69713,14 +69698,14 @@ function LoginPageController($scope, RemoteCallService,StorageService,$location)
                 if(data.data.response == 2)
                 {
                     $scope.user = data.data.data;
-                    alert($scope.user);
+                    alert($scope.user.name);
                     StorageService.set("user",$scope.user);
                     var menuRight = document.getElementById("nav");
                     menuRight.innerHTML = " <div class=\"item\">\n" +
                         "        <i class=\"user icon\"></i>\n" +
                         "        \n" +
                         "      </div>\n" +
-                        "      <a href=\"#!insertUser\" class=\"item\">\n" +
+                        "      <a href=\"#!\" class=\"item\">\n" +
                         "        <i class=\"sign out icon\"></i>\n" +
                         "        Logout\n" +
                         "      </a>";
