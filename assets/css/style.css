@@ -52,6 +52,51 @@ Gomma Store
 	margin-top: 5%;
 }
 
+#auto{
+	 border-color: yellow;
+	 border-width: 2px;
+	 width: 600px;
+ }
+#moto{
+	border-color: maroon;
+	border-width: 2px;
+	width: 600px;
+}
+
+#commerciali{
+	border-color: orange;
+	border-width: 2px;
+	width: 600px;
+}
+
 #menuUser {
 	margin-top: 5%;
+	text-align:center;
+}
+
+div#menuUser div.produttore.field {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#menuUser div.motorizzazione.field {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#menuUser div.velocita.field {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#menuUser div.tabular.menu {
+	text-align:center;
+}
+
+img {
+	width: 32px;
+	height: 32px;
 }

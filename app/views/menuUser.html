@@ -1,28 +1,9 @@
-<style>
-    #auto{
-        border-color: yellow;
-        border-width: 2px;
-        width: 600px;
-    }
-    #moto{
-        border-color: maroon;
-        border-width: 2px;
-        width: 600px;
-    }
-
-    #commerciali{
-        border-color: orange;
-        border-width: 2px;
-        width: 600px;
-    }
-</style>
-
 <div id="menuUser" class="ui grid">
     <div class="four wide column">
         <div class="ui vertical fluid tabular menu">
-            <a class="active yellow item" data-tab="first-auto"><div><img ng-src="../assets/icons/car.png">Auto</div></a>
-            <a class="item brown" data-tab="second-moto"><div><img ng-src="../assets/icons/motorcycle.png">Moto</div></a>
-            <a class="item orange" data-tab="third-commerciali"><div><img ng-src="../assets/icons/trucking.png">Commerciali</div></a>
+            <a class="active yellow item" data-tab="first-auto"><div><img ng-src="{{loadImage('car')}}"></div><div>Auto</div></a>
+            <a class="item brown" data-tab="second-moto"><div><img ng-src="{{loadImage('motorcycle')}}"></div><div>Moto</div></a>
+            <a class="item orange" data-tab="third-commerciali"><div><img ng-src="{{loadImage('trucking')}}"></div><div>Commerciali</div></a>
         </div>
     </div>
 
@@ -34,9 +15,8 @@
         </div>
         <div class="ui active tab segment" data-tab="dimensione-auto">
             <form class="ui form" name="dimensionsAuto">
-                <h4 class="ui dividing header">Shipping Information</h4>
+                <h4 class="ui dividing header">Inserisci Dimensioni</h4>
                 <div class="field">
-                    <label>Name</label>
                     <div class="two fields">
                         <div class="field">
                             Larghezza<input type="text" name="width" ng-model="width" ng-required="true">
@@ -59,9 +39,8 @@
         </div>
         <div class="ui tab segment" data-tab="veicolo-auto">
             <form class="ui form" name="vehicleAuto">
-                <h4 class="ui dividing header">Shipping Information</h4>
+                <h4 class="ui dividing header">Inserisci Caratteristiche Veicolo</h4>
                 <div class="field">
-                    <label>Name</label>
                     <div class="two fields">
                         <div class="field">
                             Marca<input type="text" name="brand" ng-model="brand" ng-required="true">
@@ -79,7 +58,7 @@
                         </div>
                     </div>
                     <div class="two fields">
-                        <div class="field">
+                        <div class="motorizzazione field">
                             Motorizzazione<input type="text" name="capacity" ng-model="capacity" ng-required="true">
                         </div>
                     </div>
@@ -89,11 +68,10 @@
         </div>
         <div class="ui tab segment" data-tab="brand-auto">
             <form class="ui form" name="brandAuto">
-                <h4 class="ui dividing header">Shipping Information</h4>
+                <h4 class="ui dividing header">Inserisci Produttore</h4>
                 <div class="field">
-                    <label>Name</label>
                     <div class="fields">
-                        <div class="field">
+                        <div class="produttore field">
                             Produttore<input type="text" name="manufactuer" ng-model="manufactuer" ng-required="true">
                         </div>
                     </div>
@@ -111,9 +89,8 @@
 
         <div class="ui active tab segment" data-tab="dimensione-moto">
             <form class="ui form" name="dimensionsMoto">
-                <h4 class="ui dividing header">Shipping Information</h4>
+                <h4 class="ui dividing header">Inserisci Dimensioni</h4>
                 <div class="field">
-                    <label>Name</label>
                     <div class="two fields">
                         <div class="field">
                             Larghezza<input type="text" name="width" ng-model="width" ng-required="true">
@@ -131,7 +108,7 @@
                         </div>
                     </div>
                     <div class="two fields">
-                        <div class="field">
+                        <div class="velocita field">
                             Velocità<input type="text" name="speed" ng-model="speed" ng-required="true">
                         </div>
                     </div>
@@ -141,11 +118,10 @@
         </div>
         <div class="ui tab segment" data-tab="brand-moto">
             <form class="ui form" name="brandMoto">
-                <h4 class="ui dividing header">Shipping Information</h4>
+                <h4 class="ui dividing header">Inserisci Produttore</h4>
                 <div class="field">
-                    <label>Name</label>
                     <div class="fields">
-                        <div class="field">
+                        <div class="produttore field">
                             Produttore<input type="text" name="manufactuer" ng-model="manufactuer">
                         </div>
                     </div>
@@ -163,9 +139,8 @@
 
         <div class="ui active tab segment" data-tab="dimensione-commerciali">
             <form class="ui form" name="dimensionsCommerciali">
-                <h4 class="ui dividing header">Shipping Information</h4>
+                <h4 class="ui dividing header">Inserisci Dimensioni</h4>
                 <div class="field">
-                    <label>Name</label>
                     <div class="two fields">
                         <div class="field">
                             Larghezza<input type="text" name="width" ng-model="width" ng-required="true">
@@ -183,7 +158,7 @@
                         </div>
                     </div>
                     <div class="two fields">
-                        <div class="field">
+                        <div class="velocita field">
                             Velocità<input type="text" name="speed" ng-model="speed" ng-required="true">
                         </div>
                     </div>
@@ -193,11 +168,10 @@
         </div>
         <div class="ui tab segment" data-tab="brand-commerciali">
             <form class="ui form" name="brandCommerciali">
-                <h4 class="ui dividing header">Shipping Information</h4>
+                <h4 class="ui dividing header">Inserisci Produttore</h4>
                 <div class="field">
-                    <label>Name</label>
                     <div class="fields">
-                        <div class="field">
+                        <div class="produttore field">
                             Produttore<input type="text" name="manufactuer" ng-model="manufactuer" ng-required="true">
                         </div>
                     </div>
@@ -207,7 +181,6 @@
         </div>
     </div>
 </div>
-
 <script>
     $(document).ready(function(){
         $('.tabular.menu .item').tab({history:false});
@@ -217,3 +190,4 @@
         $('.demo.menu .item').tab({history:false});
     });
 </script>
+

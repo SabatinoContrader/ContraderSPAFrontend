@@ -10,3 +10,9 @@ window.app= angular.module('GommaStoreApp', ["ngRoute"]);
 require('./routing.js');
 require('./factories');
 require('./controllers');
+
+app.run(function($rootScope){
+    $rootScope.loadImage = function (imageName){
+        return require('../assets/icons/' + imageName + '.png');
+    }
+});
