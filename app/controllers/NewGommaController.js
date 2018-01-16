@@ -1,7 +1,7 @@
-NewGommaController.$inject = ['$scope','RemoteCallService'];
+NewGommaController.$inject = ['$scope','RemoteCallService', '$location'];
 
-function NewGommaController($scope, RemoteCallService) {
-  $scope.insertSuccess = false;
+function NewGommaController($scope, RemoteCallService, $location) {
+  $scope.insertSuccess = true;
   $scope.sendGomma = function () {
     var data = {
       model: $scope.model,
@@ -18,8 +18,14 @@ function NewGommaController($scope, RemoteCallService) {
     }
     RemoteCallService.post("gomme/insertGomme", data).then(function(data) {
         if (data.status >= 200) {
-          $scope.insertSuccess = true;
+          if(data.data.response == 0)
+            $location.path('/listaGomme');
+          else
+            (data.data.response == 1)
+            $scope.insertSuccess =false;
         }
+        else
+            $scope.insertSuccess =false;
     });
   }
 
