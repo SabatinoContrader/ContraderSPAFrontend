@@ -49,6 +49,9 @@ app.config(function($routeProvider)
       .when("/menuUser", {
           templateUrl : "menuUser.html"
       })
+      .when("/index", {
+          templateUrl : "index.html"
+      })
       .otherwise({
           redirectTo: "/index.html"
       });

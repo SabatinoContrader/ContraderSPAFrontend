@@ -13,26 +13,26 @@
 <body ng-app="GommaStoreApp" ng-cloak>
 
   <div class="ui fixed inverted menu" ng-controller="Logout">
-    <div class="ui container">
-      <a href="#!wheelsStore" class="header item">Wheels Store</a>
-    </div>
-    <div id="nav" class="right menu">
-        <a href="#!login" class="item">
-            <i class="sign in icon">
-            </i> Accedi
-        </a>
-        <a href="#!insertUser" class="item">
-            <i class="add user icon">
-            </i> Registrati
-        </a>
-        <button  class="item" ng-click="esc()" ng-hide = "IsHidden">
-            <i class="sign out icon"></i>
-            Logout
-        </button>
-    </div>
+      <div class="ui container" id="menu">
+          <a href="#!wheelsStore" class="header item">Wheels Store</a>
+      </div>
+      <div id="nav" class="right menu">
+          <a href="#!login" class="item">
+              <i class="sign in icon"></i>
+              Accedi
+          </a>
+          <a href="#!insertUser" class="item">
+              <i class="add user icon"></i>
+              Registrati
+          </a>
+          <button  class="item" ng-click="esc()" ng-hide = "butLogout" id="butLogout">
+              <i class="sign out icon"></i>
+              Logout
+          </button>
+      </div>
   </div>
 
-  <div ng-view>
+  <div ng-view id="home">
   </div>
 
 
