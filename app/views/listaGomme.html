@@ -1,42 +1,36 @@
 <div id="gomme" ng-controller="ListaGommeController">
-  <h3 style="text-align: center; margin-bottom: 3%;">I nostri pneumatici</h3>
-  <div class="column">
-    <table class="ui center aligned table">
-      <thead>
-      <tr><th>Model</th>
-        <th>Manufacturer</th>
-        <th>Price</th>
-        <th>Width</th>
-        <th>Height</th>
-        <th>Diameter</th>
-        <th>Weight</th>
-        <th>Speed</th>
-        <th>Season</th>
-        <th>Type Vehicle</th>
-        <th>Quantity</th>
-      </tr></thead>
-      <tbody>
-      <tr ng-repeat="gomma in gomme">
-        <td>{{gomma.model}}</td>
-        <td>{{gomma.manufacturer}}</td>
-        <td>{{gomma.price}}</td>
-        <td>{{gomma.width}}</td>
-        <td>{{gomma.height}}</td>
-        <td>{{gomma.diameter}}</td>
-        <td>{{gomma.weight}}</td>
-        <td>{{gomma.speed}}</td>
-        <td>{{gomma.season}}</td>
-        <td>{{gomma.typeVehicle}}</td>
-        <td>{{gomma.quantity}}</td>
-      </tr>
-      </tbody>
-    </table>
-
-    <div class="ui tabular menu">
-      <div class="item active">Link</div>
-      <a class="item ">Link</a>
-      <a class="item">Link</a>
+    <h3 style="text-align: center; margin-bottom: 3%;">I nostri pneumatici</h3>
+    <div class="column">
+        <table class="ui center aligned table">
+            <thead>
+                <tr><th>Model</th>
+                    <th>Manufacturer</th>
+                    <th>Price</th>
+                    <th>Width</th>
+                    <th>Height</th>
+                    <th>Diameter</th>
+                    <th>Weight</th>
+                    <th>Speed</th>
+                    <th>Season</th>
+                    <th>Type Vehicle</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="gomma in gomme">
+                    <td>{{gomma.model}}</td>
+                    <td>{{gomma.manufacturer}}</td>
+                    <td>{{gomma.price}}</td>
+                    <td>{{gomma.width}}</td>
+                    <td>{{gomma.height}}</td>
+                    <td>{{gomma.diameter}}</td>
+                    <td>{{gomma.weight}}</td>
+                    <td>{{gomma.speed}}</td>
+                    <td>{{gomma.season}}</td>
+                    <td>{{gomma.typeVehicle}}</td>
+                    <td>{{gomma.quantity}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-  </div>
 </div>
-

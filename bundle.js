@@ -69447,6 +69447,7 @@ app.config(function($routeProvider)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 =======
 >>>>>>> Stashed changes
@@ -69467,6 +69468,10 @@ app.config(function($routeProvider)
       })
       .when("/menuUser", {
           templateUrl : "menuUser.html"
+=======
+      .when("/getUsers", {
+          templateUrl : "listaUsers.html"
+>>>>>>> Stashed changes
 =======
       .when("/getUsers", {
           templateUrl : "listaUsers.html"
@@ -69553,6 +69558,7 @@ app.controller('searchContr', __webpack_require__(33));
 app.controller('InsertVehicleController',__webpack_require__(34));
 app.controller('ListVehicleController',__webpack_require__(35));
 app.controller('ListaUsersController',__webpack_require__(36));
+<<<<<<< Updated upstream
 app.controller('searchForSizeController',__webpack_require__(37));
 app.controller('ListaGommeForSizeController',__webpack_require__(38));
 app.controller('ListaGommeByVehicleController',__webpack_require__(39));
@@ -69572,6 +69578,8 @@ app.controller('searchContr', __webpack_require__(32));
 app.controller('InsertVehicleController',__webpack_require__(33));
 app.controller('ListVehicleController',__webpack_require__(34));
 app.controller('ListaUsersController',__webpack_require__(35));
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 /***/ }),
@@ -69846,9 +69854,13 @@ module.exports = ListVehicleController;
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 36 */
 =======
 /* 35 */
+>>>>>>> Stashed changes
+=======
+/* 36 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
@@ -69862,6 +69874,7 @@ function ListaUsersController($scope, RemoteCallService) {
 
 module.exports = ListaUsersController;
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 /***/ }),
 /* 37 */
@@ -69954,6 +69967,8 @@ function searchVehicle($scope, StorageService)
 
 module.exports = searchVehicle;
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 /***/ })
