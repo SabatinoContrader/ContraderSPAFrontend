@@ -12,7 +12,7 @@
 
 <body ng-app="GommaStoreApp" ng-cloak>
 
-  <div class="ui fixed inverted menu">
+  <div class="ui fixed inverted menu" ng-controller="Logout">
     <div class="ui container">
       <a href="#!wheelsStore" class="header item">Wheels Store</a>
     </div>
@@ -25,6 +25,10 @@
             <i class="add user icon">
             </i> Registrati
         </a>
+        <button  class="item" ng-click="esc()" ng-hide = "IsHidden">
+            <i class="sign out icon"></i>
+            Logout
+        </button>
     </div>
   </div>
 

@@ -15,19 +15,16 @@ function LoginPageController($scope, RemoteCallService,StorageService,$location)
 
                 if(data.data.response == 2)
                 {
+                    StorageService.set("butlog",false);
                     $scope.user = data.data.data;
-                    alert($scope.user.name);
                     StorageService.set("user",$scope.user);
-                    var menuRight = document.getElementById("nav");
+                   /* var menuRight = document.getElementById("nav");
                     menuRight.innerHTML = " <div class=\"item\">\n" +
-                        "        <i class=\"user icon\"></i>\n" +
+                        "        <i class=\"user icon\"></i>\n" +$scope.user.firstname+" "+$scope.user.lastname+
                         "        \n" +
-                        "      </div>\n" +
-                        "      <a href=\"#!\" class=\"item\">\n" +
-                        "        <i class=\"sign out icon\"></i>\n" +
-                        "        Logout\n" +
-                        "      </a>";
+                        "      </div>";*/
                     $location.path('/menuAdmin');
+
                 }
                 else
                     if (data.data.response == 3)
