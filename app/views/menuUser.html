@@ -1,4 +1,4 @@
-<div id="menuUser" class="ui grid">
+<div id="menuUser" class="ui column centered grid">
     <div class="four wide column">
         <div class="ui vertical fluid tabular menu">
             <a class="active yellow item" data-tab="first-auto"><div><img ng-src="{{loadImage('car')}}"></div><div>Auto</div></a>
@@ -13,7 +13,7 @@
             <a class="blue item" data-tab="veicolo-auto">Veicolo</a>
             <a class="green item" data-tab="brand-auto">Brand</a>
         </div>
-        <div class="ui active tab segment" data-tab="dimensione-auto">
+        <div class="ui active tab segment" data-tab="dimensione-auto" ng-controller="ListaGommeForSizeController">
             <form class="ui form" name="dimensionsAuto">
                 <h4 class="ui dividing header">Inserisci Dimensioni</h4>
                 <div class="field">
@@ -31,13 +31,14 @@
                         </div>
                         <div class="field">
                             Stagione<input type="text" name="season" ng-model="season" ng-required="true">
+                            <input type="hidden" name="typeVehicle" ng-init="typeVehicle='auto';"/>
                         </div>
                     </div>
                 </div>
-                <div class="ui red button" type="submit" ng-disabled="dimensionsAuto.$invalid" ng-click="">Conferma</div>
+                <button class="ui red button" type="submit" ng-disabled="dimensionsAuto.$invalid" ng-click="sendSize()">Conferma</button>
             </form>
         </div>
-        <div class="ui tab segment" data-tab="veicolo-auto">
+        <div class="ui tab segment" data-tab="veicolo-auto" ng-controller="ListaGommeByVehicleController">
             <form class="ui form" name="vehicleAuto">
                 <h4 class="ui dividing header">Inserisci Caratteristiche Veicolo</h4>
                 <div class="field">
@@ -63,20 +64,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="ui blue button" type="submit" ng-disabled="vehicleAuto.$invalid" ng-click="">Conferma</div>
+                <button class="ui blue button" type="submit" ng-disabled="vehicleAuto.$invalid" ng-click="sendByVehicle()">Conferma</button>
             </form>
         </div>
-        <div class="ui tab segment" data-tab="brand-auto">
+        <div class="ui tab segment" data-tab="brand-auto" ng-controller="ListaGommeByManufacturerController">
             <form class="ui form" name="brandAuto">
                 <h4 class="ui dividing header">Inserisci Produttore</h4>
                 <div class="field">
                     <div class="fields">
                         <div class="produttore field">
-                            Produttore<input type="text" name="manufactuer" ng-model="manufactuer" ng-required="true">
+                            Produttore<input type="text" name="manufactuer" ng-model="manufacturer" ng-required="true">
+                            <input type="hidden" name="typeVehicle" ng-init="typeVehicle='auto';"/>
                         </div>
                     </div>
                 </div>
-                <div class="ui green button" type="submit" ng-disabled="brandAuto.$invalid" ng-click="">Conferma</div>
+                <button class="ui green button" type="submit" ng-disabled="brandAuto.$invalid" ng-click="sendManufacturer()">Conferma</button>
             </form>
         </div>
     </div>
@@ -87,7 +89,7 @@
             <a class="green item" data-tab="brand-moto">Brand</a>
         </div>
 
-        <div class="ui active tab segment" data-tab="dimensione-moto">
+        <div class="ui active tab segment" data-tab="dimensione-moto" ng-controller="ListaGommeForSizeController">
             <form class="ui form" name="dimensionsMoto">
                 <h4 class="ui dividing header">Inserisci Dimensioni</h4>
                 <div class="field">
@@ -110,23 +112,25 @@
                     <div class="two fields">
                         <div class="velocita field">
                             Velocità<input type="text" name="speed" ng-model="speed" ng-required="true">
+                            <input type="hidden" name="typeVehicle" ng-init="typeVehicle='moto';"/>
                         </div>
                     </div>
                 </div>
-                <div class="ui red button" type="submit" ng-disabled="dimensionsMoto.$invalid" ng-click="">Conferma</div>
+                <button class="ui red button" type="submit" ng-disabled="dimensionsMoto.$invalid" ng-click="sendSize()">Conferma</button>
             </form>
         </div>
-        <div class="ui tab segment" data-tab="brand-moto">
+        <div class="ui tab segment" data-tab="brand-moto" ng-controller="ListaGommeByManufacturerController">
             <form class="ui form" name="brandMoto">
                 <h4 class="ui dividing header">Inserisci Produttore</h4>
                 <div class="field">
                     <div class="fields">
                         <div class="produttore field">
-                            Produttore<input type="text" name="manufactuer" ng-model="manufactuer">
+                            Produttore<input type="text" name="manufactuer" ng-model="manufacturer" ng-required="true">
+                            <input type="hidden" name="typeVehicle" ng-init="typeVehicle='moto';"/>
                         </div>
                     </div>
                 </div>
-                <div class="ui green button" type="submit" ng-disabled="brandMoto.$invalid" ng-click="">Conferma</div>
+                <button class="ui green button" type="submit" ng-disabled="brandMoto.$invalid" ng-click="sendManufacturer()">Conferma</button>
             </form>
         </div>
     </div>
@@ -137,7 +141,7 @@
             <a class="green item" data-tab="brand-commerciali">Brand</a>
         </div>
 
-        <div class="ui active tab segment" data-tab="dimensione-commerciali">
+        <div class="ui active tab segment" data-tab="dimensione-commerciali" ng-controller="ListaGommeForSizeController">
             <form class="ui form" name="dimensionsCommerciali">
                 <h4 class="ui dividing header">Inserisci Dimensioni</h4>
                 <div class="field">
@@ -160,27 +164,30 @@
                     <div class="two fields">
                         <div class="velocita field">
                             Velocità<input type="text" name="speed" ng-model="speed" ng-required="true">
+                            <input type="hidden" name="typeVehicle" ng-init="typeVehicle='commerciale';"/>
                         </div>
                     </div>
                 </div>
-                <div class="ui red button" type="submit" ng-disabled="dimensionsCommerciali.$invalid" ng-click="">Conferma</div>
+                <button class="ui red button" type="submit" ng-disabled="dimensionsCommerciali.$invalid" ng-click="sendSize()">Conferma</button>
             </form>
         </div>
-        <div class="ui tab segment" data-tab="brand-commerciali">
+        <div class="ui tab segment" data-tab="brand-commerciali" ng-controller="ListaGommeByManufacturerController">
             <form class="ui form" name="brandCommerciali">
                 <h4 class="ui dividing header">Inserisci Produttore</h4>
                 <div class="field">
                     <div class="fields">
                         <div class="produttore field">
-                            Produttore<input type="text" name="manufactuer" ng-model="manufactuer" ng-required="true">
+                            Produttore<input type="text" name="manufactuer" ng-model="manufacturer" ng-required="true">
+                            <input type="hidden" name="typeVehicle" ng-init="typeVehicle='commerciale';"/>
                         </div>
                     </div>
                 </div>
-                <div class="ui green button" type="submit" ng-disabled="brandCommerciali.$invalid" ng-click="">Conferma</div>
+                <button class="ui green button" type="submit" ng-disabled="brandCommerciali.$invalid" ng-click="sendManufacturer()">Conferma</button>
             </form>
         </div>
     </div>
 </div>
+
 <script>
     $(document).ready(function(){
         $('.tabular.menu .item').tab({history:false});
