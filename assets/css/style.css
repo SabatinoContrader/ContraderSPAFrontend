@@ -100,3 +100,41 @@ img {
 	width: 32px;
 	height: 32px;
 }
+.ui.stackable.container
+{
+	width: 100%;
+	background-color:#333333;
+}
+.ui.menu a.item
+{
+	color:white;
+}
+.ui.menu a.item:hover
+{
+	color:white;
+}
+.ui.menu
+{
+	border-radius: 0em;
+}
+.ui.simple.dropdown.item
+{
+	color:white;
+}
+.icon
+{
+	color:white;
+}
+.texticon
+{
+	color:white;
+}
+.ui.menu .ui.dropdown .menu>.item
+{
+	background: #333333!important;
+	color: rgba(255, 254, 254, 0.87)!important;
+}
+.ui.fluid.button a
+{
+	bottom:3px;
+}
