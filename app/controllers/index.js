@@ -14,5 +14,4 @@ app.controller('ListaGommeForSizeController',require('./ListaGommeForSizeControl
 app.controller('ListaGommeByVehicleController',require('./ListaGommeByVehicleController'));
 app.controller('searchVehicle',require('./searchVehicle'));
 app.controller('Logout',require('./logout'));
-
-
+app.controller('WheelsStoreController', require('./WheelsStoreController'))

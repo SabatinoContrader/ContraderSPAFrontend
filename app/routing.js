@@ -52,7 +52,8 @@ app.config(function($routeProvider)
       .when("/listaGommeForSize", {
           templateUrl : "listaGommeForSize.html"
       })
+
       .otherwise({
-          redirectTo: "/index.html"
+          redirectTo: "wheelsStore.html"
       });
 });
