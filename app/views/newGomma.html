@@ -1,48 +1,50 @@
 <div id="gomme" ng-controller="NewGommaController">
-<h3 style="text-align: center; margin-bottom: 3%;">Inserisci pneumatico</h3>
+<br>
+  <h1 style="text-align: center; margin-bottom: 3%;">Inserisci pneumatico</h1>
+  <br>
   <form class="ui form" name="newGommaForm">
   <div class="field">
-    <label>Model</label>
+    <label>Modello</label>
     <input type="text" name="model" placeholder="Model" ng-model="model" ng-required="true">
   </div>
   <div class="field">
-    <label>Manufacturer</label>
+    <label>Produttore</label>
     <input type="text" name="manufactuer" placeholder="Manufacturer" ng-model="manufacturer" ng-required="true">
   </div>
   <div class="field">
-    <label>Price</label>
+    <label>Prezzo</label>
     <input type="text" name="price" placeholder="Price" ng-model="price" ng-required="true">
   </div>
   <div class="field">
-    <label>Width</label>
+    <label>Larghezza</label>
     <input type="text" name="width" placeholder="Width" ng-model="width" ng-required="true">
   </div>
   <div class="field">
-    <label>Height</label>
+    <label>Altezza</label>
     <input type="text" name="height" placeholder="Height" ng-model="height" ng-required="true">
   </div>
   <div class="field">
-    <label>Diameter</label>
+    <label>Diametro</label>
     <input type="text" name="diameter" placeholder="Diameter" ng-model="diameter" ng-required="true">
   </div>
   <div class="field">
-    <label>Weight</label>
+    <label>Peso</label>
     <input type="text" name="weight" placeholder="Weight" ng-model="weight" ng-required="true">
   </div>
   <div class="field">
-    <label>Speed</label>
+    <label>Velocità</label>
     <input type="text" name="speed" placeholder="Speed" ng-model="speed" ng-required="true">
   </div>
   <div class="field">
-    <label>Season</label>
+    <label>Stagione</label>
     <input type="text" name="season" placeholder="Season" ng-model="season" ng-required="true">
   </div>
   <div class="field">
-    <label>Type Vehicle</label>
+    <label>Tipo Veicolo</label>
     <input type="text" name="typeVehicle" placeholder="TypeVehicle" ng-model="typeVehicle" ng-required="true">
   </div>
   <div class="field">
-    <label>Quantity</label>
+    <label>Quantità</label>
     <input type="text" name="quantity" placeholder="Quantity" ng-model="quantity" ng-required="true">
   </div>
     <button class="ui button" type="submit" ng-disabled="newGommaForm.$invalid" ng-click="sendGomma()">Accedi</button>
