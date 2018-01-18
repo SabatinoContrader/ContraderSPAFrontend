@@ -2,6 +2,7 @@
     <h1></h1>
     <h3 style="text-align: center; margin-bottom: 3%;">Inserisci dati</h3>
     <form class="ui form" name="regForm">
+        <div class="container">
         <div class="field">
             <label>Username</label>
             <input type="text" name="username" placeholder="Username" ng-model="username" ng-required="true">
@@ -56,6 +57,7 @@
         </div>
 
         <button class="ui button" type="submit" ng-disabled="regForm.$invalid" ng-click="sendUser()">Invia</button>
+        </div>
     </form>
     <div class="ui positive message" ng-if="insertSuccess">
         <i class="close icon"></i>

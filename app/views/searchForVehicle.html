@@ -21,8 +21,12 @@
             <label>Capacity</label>
             <input type="text" name="capacity" placeholder="Capacity" ng-model="capacity"  ng-required="true">
         </div>
+        <script ng-if="searchForVehicleForm.$valid">$('.ui button')
+            .transition('drop');
+        </script>
         <button class="ui button" type="submit" ng-disabled="searchForVehicleForm.$invalid" ng-click="sendByVehicle()">Cerca</button>
     </form>
+
     <div class="ui negative message" ng-if="insertSuccess">
         <i class="close icon"></i>
         <div class="header">

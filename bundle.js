@@ -582,7 +582,11 @@ __webpack_require__(25);
 
 app.run(function($rootScope){
     $rootScope.loadImage = function (imageName){
+<<<<<<< Updated upstream
         return __webpack_require__(42)("./" + imageName + '.png');
+=======
+        return __webpack_require__(43)("./" + imageName + '.png');
+>>>>>>> Stashed changes
     }
 });
 
@@ -69496,9 +69500,13 @@ exports = module.exports = __webpack_require__(2)(false);
 
 // module
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 exports.push([module.i, "/*-------------------------\r\nSimple reset\r\n--------------------------*/\r\n\r\n\r\n*{\r\n\tmargin:0;\r\n\tpadding:0;\r\n}\r\n\r\n/*-------------------------\r\nGeneral Styles\r\n--------------------------*/\r\n\r\n\r\n@font-face {\r\n  font-family: 'semantic';\r\n  src: url(" + __webpack_require__(0) + ");\r\n\tsrc: url(" + __webpack_require__(4) + ");\r\n\tsrc: url(" + __webpack_require__(3) + ");\r\n\tsrc: url(" + __webpack_require__(2) + ");\r\n\r\n\r\n}\r\n\r\nhtml, body{\r\n\theight: 100%;\r\n\tfont-family: semantic;\r\n}\r\n\r\n\r\nbody{\r\n\tfont:15px/1.3 'Open Sans', sans-serif;\r\n\tcolor: #5e5b64;\r\n\ttext-align:center;\r\n}\r\n\r\n/*-------------------------\r\nGomma Store\r\n--------------------------*/\r\n\r\n\r\n#gomme {\r\n\t  margin-top: 5%;\r\n  }\r\n\r\n#vehicles {\r\n\tmargin-top: 5%;\r\n}\r\n\r\n#users {\r\n\tmargin-top: 5%;\r\n}\r\n\r\n#auto{\r\n\t border-color: yellow;\r\n\t border-width: 2px;\r\n\t width: 600px;\r\n }\r\n#moto{\r\n\tborder-color: maroon;\r\n\tborder-width: 2px;\r\n\twidth: 600px;\r\n}\r\n\r\n#commerciali{\r\n\tborder-color: orange;\r\n\tborder-width: 2px;\r\n\twidth: 600px;\r\n}\r\n\r\n#menuUser {\r\n\tmargin-top: 5%;\r\n\ttext-align:center;\r\n}\r\n\r\ndiv#menuUser div.produttore.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.motorizzazione.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.velocita.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.tabular.menu {\r\n\ttext-align:center;\r\n}\r\n\r\nimg {\r\n\twidth: 32px;\r\n\theight: 32px;\r\n}", ""]);
 =======
 exports.push([module.i, "/*-------------------------\r\nSimple reset\r\n--------------------------*/\r\n\r\n\r\n*{\r\n\tmargin:0;\r\n\tpadding:0;\r\n}\r\n\r\n/*-------------------------\r\nGeneral Styles\r\n--------------------------*/\r\n\r\n\r\n@font-face {\r\n  font-family: 'semantic';\r\n  src: url(" + escape(__webpack_require__(0)) + ");\r\n\tsrc: url(" + escape(__webpack_require__(5)) + ");\r\n\tsrc: url(" + escape(__webpack_require__(4)) + ");\r\n\tsrc: url(" + escape(__webpack_require__(3)) + ");\r\n\r\n\r\n}\r\n\r\nhtml, body{\r\n\theight: 100%;\r\n\tfont-family: semantic;\r\n}\r\n\r\n\r\nbody{\r\n\tfont:15px/1.3 'Open Sans', sans-serif;\r\n\tcolor: #5e5b64;\r\n\ttext-align:center;\r\n}\r\n\r\n/*-------------------------\r\nGomma Store\r\n--------------------------*/\r\n\r\n\r\n#gomme {\r\n\t  margin-top: 5%;\r\n  }\r\n\r\n#vehicles {\r\n\tmargin-top: 5%;\r\n}\r\n\r\n#users {\r\n\tmargin-top: 5%;\r\n}\r\n\r\n#auto{\r\n\t border-color: yellow;\r\n\t border-width: 2px;\r\n\t width: 600px;\r\n }\r\n#moto{\r\n\tborder-color: maroon;\r\n\tborder-width: 2px;\r\n\twidth: 600px;\r\n}\r\n\r\n#commerciali{\r\n\tborder-color: orange;\r\n\tborder-width: 2px;\r\n\twidth: 600px;\r\n}\r\n\r\n#menuUser {\r\n\tmargin-top: 5%;\r\n\ttext-align:center;\r\n}\r\n\r\ndiv#menuUser div.produttore.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.motorizzazione.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.velocita.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.tabular.menu {\r\n\ttext-align:center;\r\n}\r\n\r\nimg {\r\n\twidth: 32px;\r\n\theight: 32px;\r\n}", ""]);
+>>>>>>> Stashed changes
+=======
+exports.push([module.i, "/*-------------------------\r\nSimple reset\r\n--------------------------*/\r\n\r\n\r\n*{\r\n\tmargin:0;\r\n\tpadding:0;\r\n}\r\n\r\n/*-------------------------\r\nGeneral Styles\r\n--------------------------*/\r\n\r\n\r\n@font-face {\r\n  font-family: 'semantic';\r\n  src: url(" + escape(__webpack_require__(0)) + ");\r\n\tsrc: url(" + escape(__webpack_require__(5)) + ");\r\n\tsrc: url(" + escape(__webpack_require__(4)) + ");\r\n\tsrc: url(" + escape(__webpack_require__(3)) + ");\r\n\r\n\r\n}\r\n\r\nhtml, body{\r\n\theight: 100%;\r\n\tfont-family: semantic;\r\n}\r\n\r\n\r\nbody{\r\n\tfont:15px/1.3 'Open Sans', sans-serif;\r\n\tcolor: #5e5b64;\r\n\ttext-align:center;\r\n\r\n}\r\n\r\ndiv.ui.footer.segment{\r\n\tbackground-color: black;\r\n\tposition: fixed;\r\n\tbottom: auto;\r\n\twidth: 100%;\r\n\tpadding: 12px ;\r\n\ttext-align: right;\r\n\tfont:15px/1.3 'Open Sans', sans-serif;\r\n\r\n}\r\n\r\n#home{\r\n\theight: 100%;\r\n}\r\n#users{\r\n\theight: 100%;\r\n}\r\n\r\n\r\n/*#gomme{\r\n\theight: 100%;\r\n}*/\r\n.container{\r\n\theight: 100%;\r\n}\r\n\r\n/*-------------------------\r\nGomma Store\r\n--------------------------*/\r\n\r\n\r\n#gomme {\r\n\t  margin-top: 5%;\r\n  }\r\n\r\n#vehicle {\r\n\tmargin-top: 5%;\r\n}\r\n\r\n#users {\r\n\tmargin-top: 5%;\r\n}\r\n\r\n#auto{\r\n\t border-color: yellow;\r\n\t border-width: 2px;\r\n\t width: 600px;\r\n }\r\n#moto{\r\n\tborder-color: maroon;\r\n\tborder-width: 2px;\r\n\twidth: 600px;\r\n}\r\n\r\n#commerciali{\r\n\tborder-color: orange;\r\n\tborder-width: 2px;\r\n\twidth: 600px;\r\n}\r\n\r\n#menuUser {\r\n\tmargin-top: 5%;\r\n\ttext-align:center;\r\n}\r\n\r\ndiv#menuUser div.produttore.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.motorizzazione.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.velocita.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.tabular.menu {\r\n\ttext-align:center;\r\n}\r\n\r\nimg {\r\n\twidth: 32px;\r\n\theight: 32px;\r\n}", ""]);
 >>>>>>> Stashed changes
 
 // exports
@@ -69559,10 +69567,16 @@ app.config(function($routeProvider)
       .when("/menuUser", {
           templateUrl : "menuUser.html"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       })
       .when("/index", {
           templateUrl : "index.html"
 =======
+>>>>>>> Stashed changes
+=======
+      })
+      .when("/index", {
+          templateUrl : "index.html"
 >>>>>>> Stashed changes
       })
       .otherwise({
@@ -69665,6 +69679,7 @@ module.exports = NavService;
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< Updated upstream
 app.controller('NavController', __webpack_require__(26));
 app.controller('ListaGommeController', __webpack_require__(27));
 app.controller('NewGommaController', __webpack_require__(28));
@@ -69681,6 +69696,24 @@ app.controller('ListaGommeForSizeController',__webpack_require__(38));
 app.controller('ListaGommeByVehicleController',__webpack_require__(39));
 app.controller('searchVehicle',__webpack_require__(40));
 app.controller('Logout',__webpack_require__(41));
+=======
+app.controller('NavController', __webpack_require__(27));
+app.controller('ListaGommeController', __webpack_require__(28));
+app.controller('NewGommaController', __webpack_require__(29));
+app.controller('ListaGommeByManufacturerController', __webpack_require__(30));
+app.controller('LoginPageController', __webpack_require__(31));
+app.controller('AboutController', __webpack_require__(32));
+app.controller('InsertUserController', __webpack_require__(33));
+app.controller('searchContr', __webpack_require__(34));
+app.controller('InsertVehicleController',__webpack_require__(35));
+app.controller('ListVehicleController',__webpack_require__(36));
+app.controller('ListaUsersController',__webpack_require__(37));
+app.controller('searchForSizeController',__webpack_require__(38));
+app.controller('ListaGommeForSizeController',__webpack_require__(39));
+app.controller('ListaGommeByVehicleController',__webpack_require__(40));
+app.controller('searchVehicle',__webpack_require__(41));
+app.controller('Logout',__webpack_require__(42));
+>>>>>>> Stashed changes
 
 
 
@@ -69999,7 +70032,11 @@ function ListVehicleController($scope, RemoteCallService) {
 module.exports = ListVehicleController;
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 36 */
+=======
+/* 37 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 ListaUsersController.$inject = ['$scope','RemoteCallService'];
@@ -70113,6 +70150,7 @@ logout.$inject=['$scope','NavService','$location','StorageService'];
 function logout($scope,NavService,$location,StorageService)
 {
     NavService.get($scope);
+<<<<<<< Updated upstream
 
     $scope.esc= function ()
     {
@@ -70152,6 +70190,30 @@ function logout($scope, RemoteCallService,StorageService)
     {
         alert("asdasda");
 >>>>>>> Stashed changes
+=======
+
+    $scope.esc= function ()
+    {
+        StorageService.set("user",null);//azzero il valore del user logato
+
+        var menu = document.getElementById("menu");
+        menu.innerHTML="<a href=\"#!wheelsStore\" class=\"header item\">Wheels Store</a>";
+
+        var butLogout=document.getElementById("butLogout");
+        var menuRight = document.getElementById("nav");
+        menuRight.innerHTML = "        <a href=\"#!login\" class=\"item\">\n" +
+            "            <i class=\"sign in icon\">\n" +
+            "            </i> Accedi\n" +
+            "        </a>\n" +
+            "        <a href=\"#!insertUser\" class=\"item\">\n" +
+            "            <i class=\"add user icon\">\n" +
+            "            </i> Registrati\n" +
+            "        </a>";
+        menuRight.appendChild(butLogout);
+        NavService.get($scope);
+        var home = document.getElementById("home");
+        home.innerHTML="";
+>>>>>>> Stashed changes
     }
 
 }
@@ -70161,12 +70223,19 @@ module.exports = logout;
 
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 <<<<<<< Updated upstream
 	"./auto.png": 43,
+=======
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+>>>>>>> Stashed changes
 	"./bank.png": 44,
 	"./car.png": 45,
 	"./close-white-14px.png": 46,
@@ -70192,6 +70261,7 @@ var map = {
 	"./minimize.png": 66,
 	"./motorcycle.png": 67,
 	"./play-white-14px.png": 68,
+<<<<<<< Updated upstream
 	"./pneumatic.png": 69,
 	"./red-circle.png": 70,
 	"./red-hitlift.png": 71,
@@ -70231,6 +70301,13 @@ var map = {
 	"./trucking.png": 71,
 	"./yellow-circle.png": 72
 >>>>>>> Stashed changes
+=======
+	"./red-circle.png": 69,
+	"./red-hitlift.png": 70,
+	"./restore.png": 71,
+	"./trucking.png": 72,
+	"./yellow-circle.png": 73
+>>>>>>> Stashed changes
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -70246,6 +70323,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
+<<<<<<< Updated upstream
 webpackContext.id = 42;
 
 /***/ }),
@@ -70254,6 +70332,9 @@ webpackContext.id = 42;
 
 <<<<<<< Updated upstream
 module.exports = __webpack_require__.p + "./dist/fa8e48fa687cc314642cd5b26ad9978a.png";
+=======
+webpackContext.id = 43;
+>>>>>>> Stashed changes
 
 /***/ }),
 /* 44 */
@@ -70263,11 +70344,14 @@ module.exports = __webpack_require__.p + "./dist/458606bffd1af4740d0d21ce13c37d3
 
 /***/ }),
 /* 45 */
+<<<<<<< Updated upstream
 =======
 module.exports = __webpack_require__.p + "./dist/458606bffd1af4740d0d21ce13c37d3a.png";
 
 /***/ }),
 /* 44 */
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70275,9 +70359,13 @@ module.exports = __webpack_require__.p + "./dist/be5267126df32d477e4fd9c71dbd305
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 46 */
 =======
 /* 45 */
+>>>>>>> Stashed changes
+=======
+/* 46 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70285,9 +70373,13 @@ module.exports = __webpack_require__.p + "./dist/e813ca7adf145f0cb27056cfc7a7cc5
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 47 */
 =======
 /* 46 */
+>>>>>>> Stashed changes
+=======
+/* 47 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70295,9 +70387,13 @@ module.exports = __webpack_require__.p + "./dist/5555c1d5c7501d66bb75f1da2678722
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 48 */
 =======
 /* 47 */
+>>>>>>> Stashed changes
+=======
+/* 48 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70305,9 +70401,13 @@ module.exports = __webpack_require__.p + "./dist/a9b8d4ec98370b467a345c382feae47
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 49 */
 =======
 /* 48 */
+>>>>>>> Stashed changes
+=======
+/* 49 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70315,9 +70415,13 @@ module.exports = __webpack_require__.p + "./dist/b82fa678735bbfe349c04562ec353ec
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 50 */
 =======
 /* 49 */
+>>>>>>> Stashed changes
+=======
+/* 50 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70325,9 +70429,13 @@ module.exports = __webpack_require__.p + "./dist/5b5eaa9a8cd95b5ca296cf13cab2b2d
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 51 */
 =======
 /* 50 */
+>>>>>>> Stashed changes
+=======
+/* 51 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70335,9 +70443,13 @@ module.exports = __webpack_require__.p + "./dist/ea3c3e5d2d53ff9af36a58624499e46
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 52 */
 =======
 /* 51 */
+>>>>>>> Stashed changes
+=======
+/* 52 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70345,9 +70457,13 @@ module.exports = __webpack_require__.p + "./dist/e2e8d47485cb82f28da99c660030bb1
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 53 */
 =======
 /* 52 */
+>>>>>>> Stashed changes
+=======
+/* 53 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70355,9 +70471,13 @@ module.exports = __webpack_require__.p + "./dist/8a006d43ce09b8ff897b408f1a5bb0a
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 54 */
 =======
 /* 53 */
+>>>>>>> Stashed changes
+=======
+/* 54 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70365,9 +70485,13 @@ module.exports = __webpack_require__.p + "./dist/e06f04365a0c31d0b65c10e8effe3ff
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 55 */
 =======
 /* 54 */
+>>>>>>> Stashed changes
+=======
+/* 55 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70375,9 +70499,13 @@ module.exports = __webpack_require__.p + "./dist/41bab0daff7aecbc6b761a8c374235d
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 56 */
 =======
 /* 55 */
+>>>>>>> Stashed changes
+=======
+/* 56 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70385,9 +70513,13 @@ module.exports = __webpack_require__.p + "./dist/3cd3f769c57f12471bd7ab3cbd802ce
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 57 */
 =======
 /* 56 */
+>>>>>>> Stashed changes
+=======
+/* 57 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70395,9 +70527,13 @@ module.exports = __webpack_require__.p + "./dist/a05def896a1479f572fd7cd8d62bc43
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 58 */
 =======
 /* 57 */
+>>>>>>> Stashed changes
+=======
+/* 58 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70405,9 +70541,13 @@ module.exports = __webpack_require__.p + "./dist/318c5dee2cea314d64310515db14dd6
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 59 */
 =======
 /* 58 */
+>>>>>>> Stashed changes
+=======
+/* 59 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70415,9 +70555,13 @@ module.exports = __webpack_require__.p + "./dist/195f3a754ebed6faf9eea181ff2b200
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 60 */
 =======
 /* 59 */
+>>>>>>> Stashed changes
+=======
+/* 60 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70425,9 +70569,13 @@ module.exports = __webpack_require__.p + "./dist/33d5a0382c3c30eacc6161ecb95fab8
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 61 */
 =======
 /* 60 */
+>>>>>>> Stashed changes
+=======
+/* 61 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70435,9 +70583,13 @@ module.exports = __webpack_require__.p + "./dist/eb980907b88a77492344b352feef568
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 62 */
 =======
 /* 61 */
+>>>>>>> Stashed changes
+=======
+/* 62 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70445,9 +70597,13 @@ module.exports = __webpack_require__.p + "./dist/87fa9ee7b39307001830da67a24f53e
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 63 */
 =======
 /* 62 */
+>>>>>>> Stashed changes
+=======
+/* 63 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70455,9 +70611,13 @@ module.exports = __webpack_require__.p + "./dist/b582c73feac567dddc9330dadc0fd9b
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 64 */
 =======
 /* 63 */
+>>>>>>> Stashed changes
+=======
+/* 64 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70465,9 +70625,13 @@ module.exports = __webpack_require__.p + "./dist/9588e35ecc4cc46e8f4acffae0bfa16
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 65 */
 =======
 /* 64 */
+>>>>>>> Stashed changes
+=======
+/* 65 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70475,9 +70639,13 @@ module.exports = __webpack_require__.p + "./dist/a6bbcbcb8e83f23fcb3580ee779f761
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 66 */
 =======
 /* 65 */
+>>>>>>> Stashed changes
+=======
+/* 66 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70485,9 +70653,13 @@ module.exports = __webpack_require__.p + "./dist/7ba6bf01d78f7a7e1d6fccdfb2f3b16
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 67 */
 =======
 /* 66 */
+>>>>>>> Stashed changes
+=======
+/* 67 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70495,15 +70667,20 @@ module.exports = __webpack_require__.p + "./dist/1da23031a1c7394cde618c86b155153
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 68 */
 =======
 /* 67 */
+>>>>>>> Stashed changes
+=======
+/* 68 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/2343ecbc374bcc69701a7196d4c3a6e7.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 /* 69 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -70525,15 +70702,28 @@ module.exports = __webpack_require__.p + "./dist/69872aeb01b8b422cc4d56c667edeed
 =======
 /* 69 */
 >>>>>>> Stashed changes
+=======
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./dist/69872aeb01b8b422cc4d56c667edeed6.png";
+
+/***/ }),
+/* 70 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/ba21797f3a43f4167ad6ae2c501f3887.png";
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 72 */
 =======
 /* 70 */
+>>>>>>> Stashed changes
+=======
+/* 71 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70541,15 +70731,20 @@ module.exports = __webpack_require__.p + "./dist/665f4b67adc3b43d809c98cc0e25cfa
 
 /***/ }),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* 73 */
 =======
 /* 71 */
+>>>>>>> Stashed changes
+=======
+/* 72 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/e600db103c7f7b125094978d35a80ae4.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 /* 74 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -70560,6 +70755,9 @@ module.exports = __webpack_require__.p + "./dist/6502eb75841fc207cb239704617fa8c
 /* 75 */
 =======
 /* 72 */
+>>>>>>> Stashed changes
+=======
+/* 73 */
 >>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
