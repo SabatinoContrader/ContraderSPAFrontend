@@ -38,12 +38,13 @@ body{
 
 div.ui.footer.segment{
 	background-color: black;
-	position: fixed;
+	/*position: fixed;*/
 	bottom: 0;
 	width: 100%;
 	padding: 12px ;
 	text-align: right;
 	font:15px/1.3 'Open Sans', sans-serif;
+	margin-top: 14%;
 
 }
 
@@ -58,9 +59,9 @@ div.ui.footer.segment{
 #gomme{
 	height: 100%;
 }
-.container{
+/*.container{
 	height: 100%;
-}
+}*/
 
 /*-------------------------
 Gomma Store
