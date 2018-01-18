@@ -54,6 +54,6 @@ app.config(function($routeProvider)
       })
 
       .otherwise({
-          redirectTo: "wheelsStore.html"
+          redirectTo: "/wheelsStore"
       });
 });

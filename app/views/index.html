@@ -20,20 +20,35 @@
 
 <body ng-app="GommaStoreApp" ng-cloak>
 
-  <div class="ui stackable container menu" ng-controller="Logout">
+  <div class="ui stackable container menu" ng-controller="NavController">
       <div class="ui container" id="menu">
           <a href="#!wheelsStore" class="header item">Wheels Store</a>
+          <a class="item" href="{{menuNav}}" ng-if="!userLogged" ng-model="menuNav">Menu</a>
+          <div class="ui simple dropdown item" ng-if="isAdmin">
+              Scopri <i class="dropdown icon"></i>
+              <div class="menu">
+                  <a class="item" href="#!newGomma">Inserisci un nuovo pneumatico</a>
+                  <a class="item" href="#!insertVehicle">Inserisci nuovo veicolo</a>
+                  <a class="item" href="#!listaGomme">Visualizza pneumatici</a>
+                  <a class="item" href="#!getUsers">Visualizza Utenti</a>
+                  <a class="item" href="#!listaVehicle">Visualizza veicoli</a>
+              </div>
+          </div>
       </div>
       <div id="nav" class="right menu">
-          <a href="#!login" class="item">
+          <a href="#!login" class="item" ng-if="userLogged">
               <i class="sign in icon"></i>
               Accedi
           </a>
-          <a href="#!insertUser" class="item">
+          <a href="#!insertUser" class="item"  ng-if="userLogged">
               <i class="add user icon"></i>
               Registrati
           </a>
-          <a href="javascript:void(0)"  class="item" ng-click="esc()" ng-hide = "butLogout" id="butLogout">
+          <div class="item"  ng-if="!userLogged">
+              <i class="user icon"></i>
+              <p class="texticon" ng-model="credenziali">{{credenziali}}</p>
+          </div>
+          <a href="javascript:void(0)"  class="item" ng-click="esc()" ng-hide = "butLogout" id="butLogout"  ng-if="!userLogged">
               <i class="sign out icon"></i>
               <p class="texticon">Logout</p>
           </a>

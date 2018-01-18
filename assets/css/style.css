@@ -166,3 +166,7 @@ img {
 {
 	bottom:3px;
 }
+.ui.pointing.secondary.demo.menu a
+{
+	color:black;
+}

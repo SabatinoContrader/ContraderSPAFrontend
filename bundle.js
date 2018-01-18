@@ -575,7 +575,11 @@ window.app= angular.module('GommaStoreApp', ["ngRoute"]);
 
 __webpack_require__(21);
 __webpack_require__(22);
+<<<<<<< Updated upstream
 __webpack_require__(26);
+=======
+__webpack_require__(27);
+>>>>>>> Stashed changes
 
 app.run(function($rootScope){
     $rootScope.loadImage = function (imageName){
@@ -69492,7 +69496,11 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
+<<<<<<< Updated upstream
 exports.push([module.i, "/*-------------------------\r\nSimple reset\r\n--------------------------*/\r\n\r\n\r\n*{\r\n\tmargin:0;\r\n\tpadding:0;\r\n}\r\n\r\n/*-------------------------\r\nGeneral Styles\r\n--------------------------*/\r\n\r\n\r\n@font-face {\r\n  font-family: 'semantic';\r\n  src: url(" + escape(__webpack_require__(0)) + ");\r\n\tsrc: url(" + escape(__webpack_require__(5)) + ");\r\n\tsrc: url(" + escape(__webpack_require__(4)) + ");\r\n\tsrc: url(" + escape(__webpack_require__(3)) + ");\r\n\r\n\r\n}\r\n\r\nhtml, body{\r\n\theight: 100%;\r\n\tfont-family: semantic;\r\n}\r\n\r\n\r\nbody{\r\n\tfont:15px/1.3 'Open Sans', sans-serif;\r\n\tcolor: #5e5b64;\r\n\ttext-align:center;\r\n\r\n}\r\n\r\ndiv.ui.footer.segment{\r\n\tbackground-color: black;\r\n\tposition: fixed;\r\n\tbottom: 0;\r\n\twidth: 100%;\r\n\tpadding: 12px ;\r\n\ttext-align: right;\r\n\tfont:15px/1.3 'Open Sans', sans-serif;\r\n\r\n}\r\n\r\n#home{\r\n\theight: 100%;\r\n}\r\n#users{\r\n\theight: 100%;\r\n}\r\n\r\n\r\n#gomme{\r\n\theight: 100%;\r\n}\r\n.container{\r\n\theight: 100%;\r\n}\r\n\r\n/*-------------------------\r\nGomma Store\r\n--------------------------*/\r\n\r\n\r\n#gomme {\r\n\t  margin-top: 5%;\r\n  }\r\n\r\n#vehicle {\r\n\tmargin-top: 5%;\r\n}\r\n\r\n#users {\r\n\tmargin-top: 5%;\r\n}\r\n\r\n#auto{\r\n\t border-color: yellow;\r\n\t border-width: 2px;\r\n\t width: 600px;\r\n }\r\n#moto{\r\n\tborder-color: maroon;\r\n\tborder-width: 2px;\r\n\twidth: 600px;\r\n}\r\n\r\n#commerciali{\r\n\tborder-color: orange;\r\n\tborder-width: 2px;\r\n\twidth: 600px;\r\n}\r\n\r\n#menuUser {\r\n\tmargin-top: 5%;\r\n\ttext-align:center;\r\n}\r\n\r\ndiv#menuUser div.produttore.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.motorizzazione.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.velocita.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.tabular.menu {\r\n\ttext-align:center;\r\n}\r\n\r\nimg {\r\n\twidth: 32px;\r\n\theight: 32px;\r\n}\r\n.ui.stackable.container\r\n{\r\n\twidth: 100%;\r\n\tbackground-color:#333333;\r\n}\r\n.ui.menu a.item\r\n{\r\n\tcolor:white;\r\n}\r\n.ui.menu a.item:hover\r\n{\r\n\tcolor:white;\r\n}\r\n.ui.menu\r\n{\r\n\tborder-radius: 0em;\r\n}\r\n.ui.simple.dropdown.item\r\n{\r\n\tcolor:white;\r\n}\r\n.icon\r\n{\r\n\tcolor:white;\r\n}\r\n.texticon\r\n{\r\n\tcolor:white;\r\n}\r\n.ui.menu .ui.dropdown .menu>.item\r\n{\r\n\tbackground: #333333!important;\r\n\tcolor: rgba(255, 254, 254, 0.87)!important;\r\n}\r\n.ui.fluid.button a\r\n{\r\n\tbottom:3px;\r\n}", ""]);
+=======
+exports.push([module.i, "/*-------------------------\r\nSimple reset\r\n--------------------------*/\r\n\r\n\r\n*{\r\n\tmargin:0;\r\n\tpadding:0;\r\n}\r\n\r\n/*-------------------------\r\nGeneral Styles\r\n--------------------------*/\r\n\r\n\r\n@font-face {\r\n  font-family: 'semantic';\r\n  src: url(" + escape(__webpack_require__(0)) + ");\r\n\tsrc: url(" + escape(__webpack_require__(5)) + ");\r\n\tsrc: url(" + escape(__webpack_require__(4)) + ");\r\n\tsrc: url(" + escape(__webpack_require__(3)) + ");\r\n\r\n\r\n}\r\n\r\nhtml, body{\r\n\theight: 100%;\r\n\tfont-family: semantic;\r\n}\r\n\r\n\r\nbody{\r\n\tfont:15px/1.3 'Open Sans', sans-serif;\r\n\tcolor: #5e5b64;\r\n\ttext-align:center;\r\n}\r\n\r\n/*-------------------------\r\nGomma Store\r\n--------------------------*/\r\n\r\n\r\n#gomme {\r\n\t  margin-top: 5%;\r\n  }\r\n\r\n#vehicles {\r\n\tmargin-top: 5%;\r\n}\r\n\r\n#users {\r\n\tmargin-top: 5%;\r\n}\r\n\r\n#auto{\r\n\t border-color: yellow;\r\n\t border-width: 2px;\r\n\t width: 600px;\r\n }\r\n#moto{\r\n\tborder-color: maroon;\r\n\tborder-width: 2px;\r\n\twidth: 600px;\r\n}\r\n\r\n#commerciali{\r\n\tborder-color: orange;\r\n\tborder-width: 2px;\r\n\twidth: 600px;\r\n}\r\n\r\n#menuUser {\r\n\tmargin-top: 5%;\r\n\ttext-align:center;\r\n}\r\n\r\ndiv#menuUser div.produttore.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.motorizzazione.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.velocita.field {\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\ndiv#menuUser div.tabular.menu {\r\n\ttext-align:center;\r\n}\r\n\r\nimg {\r\n\twidth: 32px;\r\n\theight: 32px;\r\n}\r\n.ui.stackable.container\r\n{\r\n\twidth: 100%;\r\n\tbackground-color:#333333;\r\n}\r\n.ui.menu a.item\r\n{\r\n\tcolor:white;\r\n}\r\n.ui.menu a.item:hover\r\n{\r\n\tcolor:white;\r\n}\r\n.ui.menu\r\n{\r\n\tborder-radius: 0em;\r\n}\r\n.ui.simple.dropdown.item\r\n{\r\n\tcolor:white;\r\n}\r\n.icon\r\n{\r\n\tcolor:white;\r\n}\r\n.texticon\r\n{\r\n\tcolor:white;\r\n}\r\n.ui.menu .ui.dropdown .menu>.item\r\n{\r\n\tbackground: #333333!important;\r\n\tcolor: rgba(255, 254, 254, 0.87)!important;\r\n}\r\n.ui.fluid.button a\r\n{\r\n\tbottom:3px;\r\n}", ""]);
+>>>>>>> Stashed changes
 
 // exports
 
@@ -69569,6 +69577,10 @@ app.config(function($routeProvider)
 app.factory('RemoteCallService', __webpack_require__(23));
 app.factory('StorageService', __webpack_require__(24));
 app.factory('NavService',__webpack_require__(25));
+<<<<<<< Updated upstream
+=======
+app.factory('UserService',__webpack_require__(26));
+>>>>>>> Stashed changes
 
 /***/ }),
 /* 23 */
@@ -69645,6 +69657,7 @@ module.exports = NavService;
 
 /***/ }),
 /* 26 */
+<<<<<<< Updated upstream
 /***/ (function(module, exports, __webpack_require__) {
 
 app.controller('NavController', __webpack_require__(27));
@@ -69667,34 +69680,77 @@ app.controller('WheelsStoreController', __webpack_require__(43))
 
 /***/ }),
 /* 27 */
+=======
 /***/ (function(module, exports) {
 
-NavController.$inject = ['$scope','StorageService']
-
-function NavController ($scope,StorageService)
+function UserService()
 {
-    if(StorageService.get("user")==null)
-    {
-        var menuRight = document.getElementById("nav");
-        menuRight.innerHTML = " <a href=\"#!login\" class=\"item\">\n" +
-            "        <i class=\"sign in icon\"></i>\n" +
-            "        Accedi\n" +
-            "      </a>\n" +
-            "      <a href=\"#!insertUser\" class=\"item\">\n" +
-            "        <i class=\"add user icon\"></i>\n" +
-            "        Registrati\n" +
-            "      </a>";
+    var userLogged = true;
+    return {
+        get() {
+            return userLogged;
+        },
+        set()
+        {
+            userLogged=(userLogged ? false : true);
+            alert(userLogged);
+        }
     }
-    else
+}
+module.exports = UserService;
+
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+app.controller('NavController', __webpack_require__(28));
+app.controller('ListaGommeController', __webpack_require__(29));
+app.controller('NewGommaController', __webpack_require__(30));
+app.controller('ListaGommeByManufacturerController', __webpack_require__(31));
+app.controller('LoginPageController', __webpack_require__(32));
+app.controller('AboutController', __webpack_require__(33));
+app.controller('InsertUserController', __webpack_require__(34));
+app.controller('searchContr', __webpack_require__(35));
+app.controller('InsertVehicleController',__webpack_require__(36));
+app.controller('ListVehicleController',__webpack_require__(37));
+app.controller('ListaUsersController',__webpack_require__(38));
+app.controller('searchForSizeController',__webpack_require__(39));
+app.controller('ListaGommeForSizeController',__webpack_require__(40));
+app.controller('ListaGommeByVehicleController',__webpack_require__(41));
+app.controller('searchVehicle',__webpack_require__(42));
+app.controller('Logout',__webpack_require__(43));
+
+
+
+
+/***/ }),
+/* 28 */
+>>>>>>> Stashed changes
+/***/ (function(module, exports) {
+
+NavController.$inject = ['$rootScope','StorageService','UserService','$location']
+
+function NavController ($rootScope,StorageService,UserService,$location)
+{
+    $rootScope.userLogged=UserService.get();
+    alert("sono qui nel nav controller "+ $rootScope.userLogged);
+    $rootScope.esc = function ()
     {
-        alert("asdasas");
+       UserService.set();
+        $rootScope.userLogged=UserService.get();
+       $location.path('./index');
     }
 }
 module.exports = NavController;
 
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 28 */
+=======
+/* 29 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 ListaGommeController.$inject = ['$scope','RemoteCallService'];
@@ -69709,7 +69765,11 @@ module.exports = ListaGommeController;
 
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 29 */
+=======
+/* 30 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 NewGommaController.$inject = ['$scope','RemoteCallService', '$location'];
@@ -69748,7 +69808,11 @@ function NewGommaController($scope, RemoteCallService, $location) {
 module.exports = NewGommaController;
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 30 */
+=======
+/* 31 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 
@@ -69768,13 +69832,17 @@ function ListaGommeByManufacturerController($scope, RemoteCallService, StorageSe
 module.exports = ListaGommeByManufacturerController;
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 31 */
+=======
+/* 32 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 
-LoginPageController.$inject = ['$scope','RemoteCallService','StorageService','NavService', '$location'];
+LoginPageController.$inject = ['$scope','RemoteCallService','StorageService','NavService', '$location','UserService'];
 
-function LoginPageController($scope, RemoteCallService,StorageService,NavService,$location) {
+function LoginPageController($scope, RemoteCallService,StorageService,NavService,$location,UserService) {
 
     $scope.insertSuccess = true;
     $scope.sendUser = function () {
@@ -69786,6 +69854,7 @@ function LoginPageController($scope, RemoteCallService,StorageService,NavService
             if (data.status >= 200)
             {
                 if(data.data.response == 2)
+<<<<<<< Updated upstream
                 {
 
                     $scope.user = data.data.data;
@@ -69820,8 +69889,13 @@ function LoginPageController($scope, RemoteCallService,StorageService,NavService
                         "" + "</p></div>";
                     menuRight.appendChild(butLogout);
                     NavService.set();
-                    $location.path('/menuAdmin');
+=======
+                {//case admin
 
+                    $scope.user = data.data.data;
+                    UserService.set();
+>>>>>>> Stashed changes
+                    $location.path('/menuAdmin');
                 }
                 else
                     if (data.data.response == 3)
@@ -69862,7 +69936,11 @@ module.exports = LoginPageController;
 
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 32 */
+=======
+/* 33 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 AboutController.$inject = ['$scope', '$location']
@@ -69877,7 +69955,11 @@ module.exports = AboutController;
 
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 33 */
+=======
+/* 34 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 InsertUserController.$inject = ['$scope','RemoteCallService','StorageService','$location'];
@@ -69914,7 +69996,11 @@ function InsertUserController($scope, RemoteCallService,StorageService, $locatio
 module.exports = InsertUserController;
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 34 */
+=======
+/* 35 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 searchContr.$inject = ['$scope', 'StorageService'];
@@ -69928,7 +70014,11 @@ module.exports = searchContr;
 
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 35 */
+=======
+/* 36 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 InsertVehicleController.$inject=['$scope','RemoteCallService'];
@@ -69957,7 +70047,11 @@ module.exports = InsertVehicleController;
 
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 36 */
+=======
+/* 37 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 ListVehicleController.$inject = ['$scope','RemoteCallService'];
@@ -69971,7 +70065,11 @@ function ListVehicleController($scope, RemoteCallService) {
 module.exports = ListVehicleController;
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 37 */
+=======
+/* 38 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 ListaUsersController.$inject = ['$scope','RemoteCallService'];
@@ -69985,7 +70083,11 @@ function ListaUsersController($scope, RemoteCallService) {
 module.exports = ListaUsersController;
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 38 */
+=======
+/* 39 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 searchForSizeController.$inject = ['$scope', 'StorageService'];
@@ -69999,7 +70101,11 @@ module.exports = searchForSizeController;
 
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 39 */
+=======
+/* 40 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 ListaGommeForSizeController.$inject = ['$scope','RemoteCallService', 'StorageService','$location'];
@@ -70030,7 +70136,11 @@ module.exports = ListaGommeForSizeController;
 
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 40 */
+=======
+/* 41 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 ListaGommeByVehicleController.$inject = ['$scope','RemoteCallService', 'StorageService','$location'];
@@ -70064,7 +70174,11 @@ function ListaGommeByVehicleController($scope, RemoteCallService, StorageService
 module.exports = ListaGommeByVehicleController;
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 41 */
+=======
+/* 42 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 searchVehicle.$inject = ['$scope', 'StorageService'];
@@ -70077,7 +70191,11 @@ function searchVehicle($scope, StorageService)
 module.exports = searchVehicle;
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 42 */
+=======
+/* 43 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports) {
 
 logout.$inject=['$scope','NavService','$location','StorageService'];
@@ -70116,6 +70234,7 @@ module.exports = logout;
 
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 43 */
 /***/ (function(module, exports) {
 
@@ -70130,10 +70249,13 @@ function WheelsStoreController($scope)
 module.exports = WheelsStoreController;
 
 /***/ }),
+=======
+>>>>>>> Stashed changes
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+<<<<<<< Updated upstream
 	"./PngBridgestone1.png": 45,
 	"./PngDunlop.png": 46,
 	"./Pngindex2.png": 47,
@@ -70170,6 +70292,41 @@ var map = {
 	"./trucking.png": 78,
 	"./user.png": 79,
 	"./yellow-circle.png": 80
+=======
+	"./auto.png": 45,
+	"./bank.png": 46,
+	"./car.png": 47,
+	"./close-white-14px.png": 48,
+	"./close-yellow.png": 49,
+	"./dialog_collapse.png": 50,
+	"./dialog_restore.png": 51,
+	"./green-circle.png": 52,
+	"./green-hitlift.png": 53,
+	"./grey-circle.png": 54,
+	"./hand-pointing-right-white-18.png": 55,
+	"./ic_access_time_white_24dp_1x.png": 56,
+	"./ic_autorenew_white_48dp_1x.png": 57,
+	"./ic_clear_white_48dp_1x.png": 58,
+	"./ic_date_range_white_24dp_1x.png": 59,
+	"./ic_done_white_18dp_1x.png": 60,
+	"./ic_error_outline_white_18dp_1x.png": 61,
+	"./ic_error_white_18dp_1x.png": 62,
+	"./ic_folder_open_white_18dp_1x.png": 63,
+	"./ic_folder_white_18dp_1x.png": 64,
+	"./ic_line_style_white_24dp_1x.png": 65,
+	"./ic_play_arrow_white_48dp_1x.png": 66,
+	"./ic_refresh_white_24dp_1x.png": 67,
+	"./minimize.png": 68,
+	"./motorcycle.png": 69,
+	"./play-white-14px.png": 70,
+	"./pneumatic.png": 71,
+	"./red-circle.png": 72,
+	"./red-hitlift.png": 73,
+	"./restore.png": 74,
+	"./trucking.png": 75,
+	"./user.png": 76,
+	"./yellow-circle.png": 77
+>>>>>>> Stashed changes
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -70191,7 +70348,11 @@ webpackContext.id = 44;
 /* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< Updated upstream
 module.exports = __webpack_require__.p + "./dist/36d8623615ec9fdf6ec047f9436fc32d.png";
+=======
+module.exports = __webpack_require__.p + "./dist/fa8e48fa687cc314642cd5b26ad9978a.png";
+>>>>>>> Stashed changes
 
 /***/ }),
 /* 46 */
@@ -70201,6 +70362,7 @@ module.exports = __webpack_require__.p + "./dist/243792a8a1e69b435b51e8cd1f65d48
 
 /***/ }),
 /* 47 */
+<<<<<<< Updated upstream
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/f7d5505ddded4adc946a686706758903.png";
@@ -70219,186 +70381,308 @@ module.exports = __webpack_require__.p + "./dist/458606bffd1af4740d0d21ce13c37d3
 
 /***/ }),
 /* 50 */
+=======
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/be5267126df32d477e4fd9c71dbd305b.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 51 */
+=======
+/* 48 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/e813ca7adf145f0cb27056cfc7a7cc50.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 52 */
+=======
+/* 49 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/5555c1d5c7501d66bb75f1da2678722e.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 53 */
+=======
+/* 50 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/a9b8d4ec98370b467a345c382feae470.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 54 */
+=======
+/* 51 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/b82fa678735bbfe349c04562ec353ec6.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 55 */
+=======
+/* 52 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/5b5eaa9a8cd95b5ca296cf13cab2b2de.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 56 */
+=======
+/* 53 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/ea3c3e5d2d53ff9af36a58624499e469.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 57 */
+=======
+/* 54 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/e2e8d47485cb82f28da99c660030bb1a.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 58 */
+=======
+/* 55 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/8a006d43ce09b8ff897b408f1a5bb0a7.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 59 */
+=======
+/* 56 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/e06f04365a0c31d0b65c10e8effe3ffb.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 60 */
+=======
+/* 57 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/41bab0daff7aecbc6b761a8c374235d3.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 61 */
+=======
+/* 58 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/3cd3f769c57f12471bd7ab3cbd802cea.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 62 */
+=======
+/* 59 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/a05def896a1479f572fd7cd8d62bc435.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 63 */
+=======
+/* 60 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/318c5dee2cea314d64310515db14dd67.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 64 */
+=======
+/* 61 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/195f3a754ebed6faf9eea181ff2b2002.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 65 */
+=======
+/* 62 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/33d5a0382c3c30eacc6161ecb95fab83.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 66 */
+=======
+/* 63 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/eb980907b88a77492344b352feef5684.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 67 */
+=======
+/* 64 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/87fa9ee7b39307001830da67a24f53e8.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 68 */
+=======
+/* 65 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/b582c73feac567dddc9330dadc0fd9bc.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 69 */
+=======
+/* 66 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/9588e35ecc4cc46e8f4acffae0bfa16b.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 70 */
+=======
+/* 67 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/a6bbcbcb8e83f23fcb3580ee779f761f.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 71 */
+=======
+/* 68 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/7ba6bf01d78f7a7e1d6fccdfb2f3b169.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 72 */
+=======
+/* 69 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/1da23031a1c7394cde618c86b155153e.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 73 */
+=======
+/* 70 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/2343ecbc374bcc69701a7196d4c3a6e7.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 74 */
+=======
+/* 71 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/8ba523e5dd0735fb721c8f7c592b497c.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 75 */
+=======
+/* 72 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/69872aeb01b8b422cc4d56c667edeed6.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 76 */
+=======
+/* 73 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/ba21797f3a43f4167ad6ae2c501f3887.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 77 */
+=======
+/* 74 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/665f4b67adc3b43d809c98cc0e25cfad.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 78 */
+=======
+/* 75 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/e600db103c7f7b125094978d35a80ae4.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 79 */
+=======
+/* 76 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/6502eb75841fc207cb239704617fa8c5.png";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 80 */
+=======
+/* 77 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./dist/0a0c47e9e0e413c0fc05f108490c5859.png";

@@ -1,7 +1,7 @@
 
-LoginPageController.$inject = ['$scope','RemoteCallService','StorageService','NavService', '$location'];
+LoginPageController.$inject = ['$scope','RemoteCallService','StorageService', '$location','UserService'];
 
-function LoginPageController($scope, RemoteCallService,StorageService,NavService,$location) {
+function LoginPageController($scope, RemoteCallService,StorageService,$location,UserService) {
 
     $scope.insertSuccess = true;
     $scope.sendUser = function () {
@@ -13,62 +13,18 @@ function LoginPageController($scope, RemoteCallService,StorageService,NavService
             if (data.status >= 200)
             {
                 if(data.data.response == 2)
-                {
+                {//case admin
 
                     $scope.user = data.data.data;
-                    StorageService.set("user",$scope.user);
-                    var butLogout=document.getElementById("butLogout");
-
-                    var menu = document.getElementById("menu");
-                    menu.innerHTML="<a href=\"#!wheelsStore\" class=\"header item\">Wheels Store</a>" +
-                        "<a class=\"item\" href=\"#!menuAdmin\">Menu</a>    " +
-                        "    <div class=\"ui simple dropdown item\">" +
-                        "      Scopri <i class=\"dropdown icon\"></i>" +
-                        "              <div class=\"menu\">" +
-                        "                  <a class=\"item\" href=\"#!listaGomme\">I nostri pneumatici</a>" +
-                        "                  <a class=\"item\" href=\"#!newGomma\">Inserisci un nuovo pneumatico</a>" +
-                        "                  <a class=\"item\" href=\"#!search\">Ricerca pneumatico per brand</a>" +
-                        "                  <a class=\"item\" href=\"#!listaVehicle\">I nostri veicoli</a>" +
-                        "                  <a class=\"item\" href=\"#!insertVehicle\">Inserisci nuovo veicolo</a>" +
-                        "              </div>" +
-                        "          </div>" +
-                        "          <div class=\"ui simple dropdown item\">" +
-                        "              Chi siamo <i class=\"dropdown icon\"></i>" +
-                        "              <div class=\"menu\">\n" +
-                        "                  <a class=\"item\" href=\"#\">La nostra storia</a>"+
-                        "                  <a class=\"item\" href=\"#!about\">Contattaci</a>" +
-                        "              </div>" +
-                        "          </div>";
-
-
-                    var menuRight = document.getElementById("nav");
-                    menuRight.innerHTML = " <div class=\"item\">" +
-                        " <i class=\"user icon\"></i><p class=\"texticon\">" +$scope.user.firstname+" "+$scope.user.lastname+
-                        "" + "</p></div>";
-                    menuRight.appendChild(butLogout);
-                    NavService.set();
+                    UserService.setCred($scope.user.firstname,$scope.user.lastname,$scope.user.role);
                     $location.path('/menuAdmin');
-
                 }
                 else
                     if (data.data.response == 3)
-                    {
+                    {//case user
+
                         $scope.user = data.data.data;
-                        StorageService.set("user",$scope.user);
-
-                        var menu = document.getElementById("menu");
-                        menu.innerHTML="<a href=\"#!wheelsStore\" class=\"header item\">Wheels Store</a>" +
-                            "<a class=\"item\" href=\"#!menuUser\">Menu<a/>";
-
-                        var butLogout=document.getElementById("butLogout");
-                        var menuRight = document.getElementById("nav");
-                        menuRight.innerHTML = " <div class=\"item\">" +
-                            "        <i class=\"user icon\"></i><p class=\"texticon\">" +$scope.user.firstname+" "+$scope.user.lastname+
-                            " " +
-                            " </p> </div>";
-                        menuRight.appendChild(butLogout);
-                        NavService.set();
-
+                        UserService.setCred($scope.user.firstname,$scope.user.lastname,$scope.user.role);
                         $location.path('/menuUser');
                     }
                     else

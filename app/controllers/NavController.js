@@ -1,22 +1,21 @@
-NavController.$inject = ['$scope','StorageService']
+NavController.$inject = ['$rootScope','UserService','$location']
 
-function NavController ($scope,StorageService)
+function NavController ($rootScope,UserService,$location)
 {
-    if(StorageService.get("user")==null)
-    {
-        var menuRight = document.getElementById("nav");
-        menuRight.innerHTML = " <a href=\"#!login\" class=\"item\">\n" +
-            "        <i class=\"sign in icon\"></i>\n" +
-            "        Accedi\n" +
-            "      </a>\n" +
-            "      <a href=\"#!insertUser\" class=\"item\">\n" +
-            "        <i class=\"add user icon\"></i>\n" +
-            "        Registrati\n" +
-            "      </a>";
-    }
+    $rootScope.isAdmin=UserService.getisAdmin();
+    $rootScope.userLogged=UserService.get();
+    $rootScope.credenziali=UserService.getCred();
+    if(UserService.getRole()=="user")
+      $rootScope.menuNav="#!menuUser";
     else
+        $rootScope.menuNav="#!menuAdmin";
+
+    $rootScope.esc = function ()
     {
-        alert("asdasas");
+       UserService.set();
+       $rootScope.userLogged=UserService.get();
+       $rootScope.isAdmin=UserService.setisAdmin();
+       $location.path('./index');
     }
 }
 module.exports = NavController;
